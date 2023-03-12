@@ -32,6 +32,9 @@
       display: none;
   }
 
+  .subpage-trigger
+  {display: none}
+
   .menu-icon {
     display: none;
   }
@@ -54,6 +57,15 @@
     border: 1px solid $grey-color-light;
     border-radius: 5px;
     text-align: right;
+
+    label[for="nav-trigger"] {
+      display: block;
+      float: right;
+      width: 36px;
+      height: 36px;
+      z-index: 2;
+      cursor: pointer;
+    }
 
     label[for="nav-trigger"] {
       display: block;
