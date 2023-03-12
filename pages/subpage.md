@@ -1,8 +1,8 @@
 ---
 layout: page
 title: Subpage
-parent: Blog
-permalink: /blog/subpage
+parent: About
+permalink: /about/subpage
 nav: false
 ---
 
