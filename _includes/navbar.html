@@ -1,29 +1,47 @@
 <!-- Navbar (sit on top) -->
+
+{%- assign default_paths = site.pages | map: "path" -%}
+{%- assign page_paths = site.header_pages | default: default_paths -%}
+
 <div class="w3-top">
     <div class="w3-bar w3-white w3-card" id="myNavbar">
-        <a href="#home" class="w3-bar-item w3-button">{{site.title}}</a>
+
+        <a class="w3-bar-item w3-button w3-large" rel="author" href="{{ "/" | relative_url }}"><b>{{ site.title | escape }}</b></a>
+        
+        {%- if page_paths -%}
         <!-- Right-sided navbar links -->
         <div class="w3-right w3-hide-small">
-        <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
-        <a href="#team" class="w3-bar-item w3-button"><i class="fa fa-user"></i> TEAM</a>
-        <a href="#work" class="w3-bar-item w3-button"><i class="fa fa-th"></i> WORK</a>
-        <a href="#pricing" class="w3-bar-item w3-button"><i class="fa fa-usd"></i> PRICING</a>
-        <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACT</a>
+
+            {%- for path in page_paths -%}
+            {%- assign my_page = site.pages | where: "path", path | first -%}
+                {%- if my_page.title and my_page.nav != false -%}
+                <a href="{{ my_page.url | relative_url }}" class="w3-bar-item w3-button">{{ my_page.title | escape }} </a>
+                {%- endif -%}
+            {%- endfor -%}
+
         </div>
         <!-- Hide right-floated links on small screens and replace them with a menu icon -->
     
         <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
         <i class="fa fa-bars"></i>
         </a>
+        {%- endif -%}
     </div>
 </div>
     
 <!-- Sidebar on small screens when clicking the menu icon -->
-<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
-    <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
-    <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
-    <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">TEAM</a>
-    <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button">WORK</a>
-    <a href="#pricing" onclick="w3_close()" class="w3-bar-item w3-button">PRICING</a>
-    <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
+<nav class="w3-sidebar w3-bar-block w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+    
+    {%- if page_paths -%}
+        <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large"><b>Close X</b></a>
+
+        {%- for path in page_paths -%}
+            {%- assign my_page = site.pages | where: "path", path | first -%}
+            {%- if my_page.title and my_page.nav != false -%}
+                <a href="{{ my_page.url | relative_url }}" onclick="w3_close()" class="w3-bar-item w3-button w3-large">{{ my_page.title | escape }}</a>
+            {%- endif -%}
+        {%- endfor -%}
+
+
+    {%- endif -%}
 </nav>
