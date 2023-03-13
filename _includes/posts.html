@@ -10,14 +10,14 @@
         {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
         <img src="{{post_image | escape}} " alt="Nature" style="width:100%">
         <div class="w3-container">
-            <h3><b>{{ post.title | escape }}</b></h3>
+            <h3><a href="{{ post.url | relative_url }}"><b>{{ post.title | escape }}</b></a></h3>
             <h5>{{ post.categories }} <span class="w3-opacity">{{ post.date | date:
                     date_format }}</span>
             </h5>
         </div>
 
         <div class="w3-container">
-            <p>{{ page.content | truncate: 140 }}</p>
+            <p>{{ post.content | truncate: 240 | strip_html }}</p>
             <div class="w3-row">
                 <div class="w3-col m8 s12">
                     <p> <a href="{{ post.url | relative_url }}"><button
@@ -33,7 +33,15 @@
     </div>
     {%- endfor -%}
 
+    <div class="w3-container"><button
+            class="w3-button w3-black w3-disabled w3-padding-large w3-margin-bottom">Previous</button>
+        <button class="w3-button w3-black w3-padding-large w3-margin-bottom">Next »</button>
+    </div>
+
+
     <!-- END BLOG ENTRIES -->
 </div>
+
+
 
 {%- endif -%}

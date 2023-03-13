@@ -8,17 +8,29 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   {%- seo -%}
-  <link rel="stylesheet" href="{{ "/" | relative_url }}">
-  
+  <link rel="stylesheet" href="{{ " /" | relative_url }}">
+
   <style>
-  body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
-  .w3-bar .w3-button {
-    padding: 16px;
-  }
+    body {
+      font-size: 16px;
+    }
+
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+      font-family: "Raleway", sans-serif
+    }
+
+    .w3-bar .w3-button {
+      padding: 16px;
+    }
   </style>
 
   {%- feed_meta -%}
   {%- if jekyll.environment == 'production' and site.google_analytics -%}
-    {%- include google-analytics.html -%}
+  {%- include google-analytics.html -%}
   {%- endif -%}
 </head>

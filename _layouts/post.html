@@ -1,0 +1,31 @@
+---
+layout: default
+---
+
+{%- if page.content.size > 0 -%}
+
+<article class="w3-card-4 w3-margin w3-white w3-padding-16">
+    {%- if page.title -%}
+    <div class="w3-container">
+        <h1><b> {{page.title | escape }} </b></h1>
+        <p class="post-meta">
+            <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+                {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+                {{ page.date | date: date_format }}
+            </time>
+            {%- if page.author -%}
+            • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card"
+                    itemprop="name">{{ page.author }}</span></span>
+            {%- endif -%}
+        </p>
+    </div>
+    {%- endif -%}
+
+
+
+    <div class="w3-container">
+        <p> {{content}} </p>
+    </div>
+</article>
+
+{%- endif -%}
