@@ -6,14 +6,25 @@ layout: default
 
 <article class="w3-card-4 w3-margin w3-white w3-padding-16">
   {%- if page.title -%}
-  <div class="w3-container" style="max-width: 70%; margin: auto;">
+  <div class="w3-container">
     <h3><b> {{page.title | escape }} </b></h3>
   </div>
   {%- endif -%}
 
-  <div class="w3-container" style="max-width: 70%; margin: auto;">
+  <div class="w3-container">
     <p> {{content}} </p>
   </div>
 </article>
 
 {%- endif -%}
+
+<!-- Grid -->
+<div class="w3-row" style="max-width: 70%; margin: auto;">
+
+  {%- include posts.html -%}
+
+  <!-- END GRID -->
+</div><br>
+
+<!-- END w3-content -->
+</div>

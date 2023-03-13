@@ -11,7 +11,7 @@ layout: default
     </div>
     {%- endif -%}
 
-    <div class="w3-container">
+    <div class="w3-container" style="max-width: 70%; margin: auto;">
         <p> {{content}} </p>
     </div>
 </article>
@@ -21,15 +21,19 @@ layout: default
 <!-- Grid -->
 <div class="w3-row">
 
-    {%- include posts.html -%}
+
+    <div class="w3-col l8 s12">
+        {%- include posts.html -%}
+    </div>
+
 
     <!-- Introduction menu -->
     <div class="w3-col l4">
         <!-- About Card -->
         <div class="w3-card w3-margin w3-margin-top">
-            <img src="https://www.w3schools.com//w3images/avatar_g.jpg" style="width:100%">
+            <img src="{{site.author_img_url}}" style="width:100%">
             <div class="w3-container w3-white">
-                <h4><b>About the Author</b></h4>
+                <h4><b>Description</b></h4>
                 <p> {{site.description}} </p>
             </div>
         </div>
