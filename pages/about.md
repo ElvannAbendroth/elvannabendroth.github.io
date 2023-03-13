@@ -1,22 +1,29 @@
 ---
 layout: page
 title: About
-permalink: /about/
 ---
 
-Hey hi!
+<p class="message">
+  Hey there! This page is included as an example. Feel free to customize it for your own use upon downloading. Carry on!
+</p>
 
-My name is Elvann and I'm a professional musician who also likes to code! Here are a couple of the things I would love to share on this site:
+In the novel, _The Strange Case of Dr. Jekyll and Mr. Hyde_, Mr. Poole is Dr. Jekyll's virtuous and loyal butler. Similarly, Poole is an upstanding and effective butler that helps you build Jekyll themes. It's made by [@mdo](https://twitter.com/mdo).
 
-- Coding Projects
-- UI & UX Designs
-- Music Learning Resources
-- Language Learning & Finnish Language
+There are currently two themes built on Poole:
 
-Here's a Subpage to check out: [Subpage](/about/subpage)
+- [Hyde](https://hyde.getpoole.com)
+- [Lanyon](https://lanyon.getpoole.com)
 
-Integer eget dolor vitae odio eleifend ornare quis ut lorem. Pellentesque molestie lorem felis, sed tempus est convallis sed. In auctor ex non quam ultrices pulvinar. Nunc semper lobortis laoreet. Praesent mattis imperdiet ante, sit amet posuere mi posuere a. Nam vulputate tellus vel massa dapibus tempor. Praesent lacinia tempor sagittis. Integer eu velit non lorem sagittis vulputate non vitae felis. Etiam non nisi sed eros tincidunt pellentesque eget pulvinar metus.
+Learn more and contribute on [GitHub](https://github.com/poole).
 
-Quisque sed orci ligula. Vivamus vitae facilisis nisi. Praesent lobortis magna nec erat auctor pellentesque. Quisque nec felis nibh. Praesent lacinia magna non porttitor volutpat. Nam eu ante faucibus, congue est nec, scelerisque sapien. Integer id pretium arcu. Nam at lobortis ante, sed hendrerit enim. Suspendisse potenti. Pellentesque efficitur convallis eros, at efficitur dui sodales eget. Mauris tristique, tortor non interdum rutrum, magna nisi lobortis arcu, id fermentum eros lacus nec ex. Nullam neque leo, dapibus elementum risus a, gravida mattis neque. Curabitur maximus mollis imperdiet. Donec quis pharetra urna, ac tincidunt mauris. Curabitur accumsan vulputate nunc sit amet ultricies.
+## Setup
 
-Nullam ut vestibulum diam, volutpat accumsan sapien. Proin tempus eget mauris convallis egestas. Suspendisse massa sem, pellentesque consectetur cursus in, ullamcorper eu lectus. Suspendisse congue tincidunt sem vitae aliquet. Nunc nec convallis mi. Nunc vitae porta sapien. Morbi ut sollicitudin augue. Nunc sed euismod dolor. Morbi non consequat diam. Cras sagittis hendrerit nisl scelerisque lacinia.
+Some fun facts about the setup of this project include:
+
+- Built for [Jekyll](https://jekyllrb.com)
+- Developed on GitHub and hosted for free on [GitHub Pages](https://pages.github.com)
+- Coded with [Atom](https://atom.io), an amazing open source code editor
+
+Have questions or suggestions? Feel free to [open an issue on GitHub](https://github.com/poole/poole/issues/new) or [ask me on Twitter](https://twitter.com/mdo).
+
+Thanks for reading!
