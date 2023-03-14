@@ -1,0 +1,29 @@
+.sidenav {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: var(--body-bg-2);
+    overflow-x: hidden;
+  }
+
+.show {
+    display:block;
+}
+
+.hidden {
+    display: none;
+}
+
+@media only screen and (min-width: 600px) {
+    /* For tablets: */
+    .sidenav { width: 300px;}
+
+  }
+  @media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .sidenav { width: 300px;}
+
+  }
