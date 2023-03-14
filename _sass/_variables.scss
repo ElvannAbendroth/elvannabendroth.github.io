@@ -31,6 +31,7 @@
   --body-line-height: 1.5;
   --body-color: var(--gray-700);
   --body-bg: #fff;
+  --body-bg-2: var(--gray-200);
 
   --link-color: var(--blue);
   --link-hover-color: #1c7ed6;
@@ -53,6 +54,7 @@
   :root {
     --body-color: var(--gray-300);
     --body-bg: var(--gray-800);
+    --body-bg-2: var(--gray-900);
 
     --heading-color: #fff;
 

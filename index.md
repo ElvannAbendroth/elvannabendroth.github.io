@@ -18,7 +18,10 @@ See you around!
 
 ---
 
-## Pages
+<div class="row">
+  <div class="col-6 col-s-12">
+
+<h2>Pages</h2>
 
 {% assign page_title = page.title %}
 
@@ -29,10 +32,11 @@ See you around!
         {% endif %}  
     {% endfor %}
   </ul>
+  </div>
 
----
+  <div class="col-6 col-s-12">
 
-## Archives
+<h2>Archives</h2>
 
 {% assign postsByYearMonth = site.posts | group_by_exp: "post", "post.date | date: '%B %Y'" %}
 {% for yearMonth in postsByYearMonth %}
@@ -44,3 +48,6 @@ See you around!
     {% endfor %}
   </ul>
 {% endfor %}
+  </div>
+
+</div>
