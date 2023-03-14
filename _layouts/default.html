@@ -5,7 +5,19 @@
 
 <body>
 
-  <div class="container content">
+  <nav id="sideNav" class="container sidenav" style="display:none;">
+    {% assign page_title = page.title %}
+
+    <ul>
+      {% for page in site.pages %}
+      {% if page.title and page.title != page_title and page.title != "Home" %}
+      <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+      {% endif %}
+      {% endfor %}
+    </ul>
+  </nav>
+
+  <div id="main" class="container content">
 
     <header class="masthead row">
 
@@ -18,22 +30,8 @@
 
       </div>
       <div class="masthead-title col-2 col-s-2">
-        <h3><a href="#" onclick="toggleNav('topNav')"><i class="fa-solid fa-bars"></i></a></h3>
-
+        <h3><a href="#" onclick="toggleNav('sideNav')"><i class="fa-solid fa-bars"></i></a></h3>
       </div>
-
-      <nav id="topNav" style="display:none;">
-        {% assign page_title = page.title %}
-
-        <ul>
-          {% for page in site.pages %}
-          {% if page.title and page.title != page_title %}
-          <li><a href="{{ page.url }}">{{ page.title }}</a></li>
-          {% endif %}
-          {% endfor %}
-        </ul>
-      </nav>
-
     </header>
 
     <main>
@@ -53,14 +51,38 @@
   <script>
 
     const toggleNav = (targetId) => {
-      const element = document.getElementById(targetId)
-      if (element.style.display === "none") {
-        element.setAttribute("style", "display:block;")
+      //document.getElementById(targetId).classList.add("boo")
+      console.log(document.getElementById(targetId).classList)
+      if (document.getElementById(targetId).style.display === "none") {
+        document.getElementById("main").style.marginLeft = "25%";
+        document.getElementById(targetId).style.width = "25%";
+        document.getElementById(targetId).style.display = "block";
+
       } else {
-        element.setAttribute("style", "display:none;")
+        document.getElementById("main").style.margin = "auto";
+        document.getElementById(targetId).style.display = "none";
+
       }
 
     }
+
+
+    // const toggleNav = (targetId) => {
+    //   //document.getElementById(targetId).classList.add("boo")
+    //   console.log(document.getElementById(targetId).classList)
+    //   if (document.getElementById(targetId).style.display === "none") {
+    //     document.getElementById("main").style.marginLeft = "25%";
+    //     document.getElementById(targetId).style.width = "25%";
+    //     document.getElementById(targetId).style.display = "block";
+
+    //   } else {
+    //     document.getElementById("main").style.margin = "auto";
+    //     document.getElementById(targetId).style.display = "none";
+
+    //   }
+
+    // }
+
 
   </script>
 
