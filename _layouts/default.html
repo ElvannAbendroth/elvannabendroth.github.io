@@ -5,83 +5,107 @@
 
 <body>
 
-  <nav id="sideNav" class="container sidenav" style="display:none;">
-    {% assign page_title = page.title %}
+  <div class="row">
 
-    <ul>
-      {% for page in site.pages %}
-      {% if page.title and page.title != page_title and page.title != "Home" %}
-      <li><a href="{{ page.url }}">{{ page.title }}</a></li>
-      {% endif %}
-      {% endfor %}
-    </ul>
-  </nav>
+    <nav id="sideNav" class="sidenav hidden animate-width">
+      <div class="container">
 
-  <div id="main" class="container content">
+        <div class="masterhead">
+          <h3 class="masthead">Menu <a href="#" onclick="toggleNav('sideNav')"><i class="fa-solid fa-x"></i></a></h3>
+          <div class="masthead-title">
+            <h3></h3>
+          </div>
+        </div>
 
-    <header class="masthead row">
+        {% assign page_title = page.title %}
+        <h2>Pages</h2>
+        <ul>
+          {% for page in site.pages %}
+          {% if page.title and page.title != page_title and page.title != "Home" %}
+          <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+          {% endif %}
+          {% endfor %}
+        </ul>
 
-      <div class="col-10 col-s-10">
+        <h2>Archives</h2>
 
-        <h3 class="masthead-title">
-          <a href="{{ site.baseurl }}/" title="Home">{{ site.title }}</a>
-          <small><i>{{ site.tagline | default: "A cool site project!"}}</i> </small>
-        </h3>
+        {% assign postsByYearMonth = site.posts | group_by_exp: "post", "post.date | date: '%B %Y'" %}
+        {% for yearMonth in postsByYearMonth %}
 
-      </div>
-      <div class="masthead-title col-2 col-s-2">
-        <h3><a href="#" onclick="toggleNav('sideNav')"><i class="fa-solid fa-bars"></i></a></h3>
-      </div>
-    </header>
+        <h3>{{ yearMonth.name }}</h3>
+        <ul>
+          {% for post in yearMonth.items %}
+          <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+          {% endfor %}
+        </ul>
+        {% endfor %}
+    </nav>
 
-    <main>
-      {{ content }}
-    </main>
-
-    <footer class="footer">
-      <small>
-        &copy; <time datetime="{{ site.time | date_to_xmlschema }}">{{ site.time | date: '%Y' }}</time>, Theme by Elvann
-        on top of Jekyll and Poole. All rights reserved.
-      </small>
-    </footer>
   </div>
+
+
+  <div id="main">
+    <div class="container">
+      <header class="masthead row">
+        <div class="masthead-title col-1 col-s-1">
+          <h3><a href="#" onclick="toggleNav('sideNav')"><i class="fa-solid fa-bars"></i></a></h3>
+        </div>
+
+        <div class="col-11 col-s-11">
+
+          <h3 class="masthead-title">
+            <a href="{{ site.baseurl }}/" title="Home">{{ site.title }}</a>
+            <small><i>{{ site.tagline | default: "A cool site project!"}}</i> </small>
+          </h3>
+
+        </div>
+
+      </header>
+
+      <main>
+        {{ content }}
+      </main>
+
+      <footer class="footer">
+        <small>
+          &copy; <time datetime="{{ site.time | date_to_xmlschema }}">{{ site.time | date: '%Y' }}</time>, Theme by
+          Elvann
+          on top of Jekyll and Poole. All rights reserved.
+        </small>
+      </footer>
+
+    </div>
+
+
+
+
+
+
+  </div>
+
+
+  </div>
+
+
 
   {% include analytics.html %}
 
   <script>
 
     const toggleNav = (targetId) => {
-      //document.getElementById(targetId).classList.add("boo")
       console.log(document.getElementById(targetId).classList)
-      if (document.getElementById(targetId).style.display === "none") {
-        document.getElementById("main").style.marginLeft = "25%";
-        document.getElementById(targetId).style.width = "25%";
-        document.getElementById(targetId).style.display = "block";
+      if (document.getElementById(targetId).classList.contains("hidden")) {
+        document.getElementById(targetId).classList.replace("hidden", "show")
+        document.getElementById("main").classList.add("content-slide")
+
+
 
       } else {
-        document.getElementById("main").style.margin = "auto";
-        document.getElementById(targetId).style.display = "none";
-
+        document.getElementById(targetId).classList.replace("show", "hidden")
+        document.getElementById("main").classList.remove("content-slide")
       }
 
     }
-
-
-    // const toggleNav = (targetId) => {
-    //   //document.getElementById(targetId).classList.add("boo")
-    //   console.log(document.getElementById(targetId).classList)
-    //   if (document.getElementById(targetId).style.display === "none") {
-    //     document.getElementById("main").style.marginLeft = "25%";
-    //     document.getElementById(targetId).style.width = "25%";
-    //     document.getElementById(targetId).style.display = "block";
-
-    //   } else {
-    //     document.getElementById("main").style.margin = "auto";
-    //     document.getElementById(targetId).style.display = "none";
-
-    //   }
-
-    // }
 
 
   </script>
