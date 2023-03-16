@@ -3,6 +3,7 @@
 }
 
 #sidebar {
+    overflow-x: hidden;
     background-color: var(--body-bg-2);
     height: 100vh;
     max-width: 100%;
@@ -16,15 +17,16 @@
 
 #sidebar.open {
     left: 0;
+    overflow-x: hidden;
 }
 
 #main {
-    position: relative;
+    position: fixed;
+    overflow-x: hidden;
     top: 0;
     left: 0;
     height: 100dvh;
-    width: 100vw;
-    overflow-x: hidden;
+    width: 100dvw;
     transition: left 0.3s;
 }
 
