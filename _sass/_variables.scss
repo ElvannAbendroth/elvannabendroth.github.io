@@ -1,5 +1,5 @@
 :root {
-  --primary-color: var(--indigo);
+  --primary-color: var(--blue-300);
 
   --white: #ffffff;
   --gray-000: #f8f9fa;
@@ -70,7 +70,7 @@
 
     --heading-color: var(--white);
 
-    --link-color: var(--blue-300);
+    --link-color: var(--primary-color);
     --link-hover-color: var(--blue-400);
 
     --border-color: var(--gray-700);

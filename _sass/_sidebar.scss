@@ -61,7 +61,9 @@
 .menu h1,
 .menu h2,
 .menu h3,
-.menu h4 .menu h5 .menu h6,
+.menu h4,
+.menu h5,
+.menu h6,
 .menu p {
     color: var(--sidebar-color);
     padding: var(--spacer);
@@ -99,7 +101,7 @@
     background-color: hsla(0, 0%, 100%, 0.1);
     transition: background-color 0.5s;
     border-style: none solid none none;
-    border-color: var(--link-hover-color);
+    border-color: var(--primary-color);
     border-width: 5px;
     outline-offset: -5px;
     transition: border-color 1.5s;
