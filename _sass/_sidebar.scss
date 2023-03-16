@@ -4,54 +4,43 @@
 
 #sidebar {
     height: 100vh;
+    max-width: 100%;
     position: fixed;
-    z-index: 1;
+    width: var(--sidebar-width);
     top: 0;
-    left: 0;
     background-color: var(--body-bg-2);
     overflow-x: hidden;
     float: left;
-    transition: width 0.3s;
+    transition: left 0.3s;
+    left: calc(var(--sidebar-width) * -1);
 }
 
-.hidden {
-    width: 0;
-}
-
-.open {
-    width: var(--sidebar-width);
+#sidebar.open {
+    left: 0;
 }
 
 #main {
-    margin-left: 0px;
-    transition: margin-left 0.3s;
+    position: relative;
+    top: 0;
+    left: 0;
+    transition: left 0.3s;
+    height: 100dvh;
 }
 
-#main.content-slide {
+#main.slide-right {
     float: left;
     overflow-x: hidden;
     position: fixed;
-    margin-left: var(--sidebar-width);
+    left: var(--sidebar-width);
     width: 100vw;
     overflow-x: hidden;
 }
-
-// @media only screen and (min-width: 600px) {
-//     /* For Tablet and desktop: */
-//     .sidenav {
-//         width: 100px;
-//         position: fixed;
-//     }
-
-//     .content-slide {
-//         margin-left: 100px;
-//     }
-// }
 
 /* TODO:
 - cleanup this file
 - make navbar responsive
 - menu styling
 - on click in main close nav
+- add close on escape key
 
 */

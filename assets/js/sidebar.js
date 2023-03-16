@@ -2,33 +2,29 @@ const sidebar = document.getElementById("sidebar");
 const main = document.getElementById("main");
 
 const openSidebar = () => {
-  sidebar.classList.replace("hidden", "open");
-  main.classList.add("content-slide");
+  sidebar.classList.add("open");
+  main.classList.add("slide-right");
   setTimeout(() => {
-    main.addEventListener("click", () => clickOut(), true);
+    main.addEventListener("click", (evt) => clickOut(evt), true);
   }, "1000");
 };
 
 const closeSidebar = () => {
-  sidebar.classList.replace("open", "hidden");
-  main.classList.remove("content-slide");
-  main.removeEventListener("click", () => clickOut(), true);
+  sidebar.classList.remove("open");
+  main.classList.remove("slide-right");
+  main.removeEventListener("click", (evt) => clickOut(evt), true);
 };
 
 const toggleNav = () => {
-  if (sidebar.classList.contains("hidden")) {
+  if (!sidebar.classList.contains("open")) {
     openSidebar();
   } else {
     closeSidebar();
   }
 };
-const clickOut = () => {
-  if (sidebar.classList.contains("hidden") === false) {
+const clickOut = (evt) => {
+  if (sidebar.classList.contains("open")) {
+    evt.stopPropagation();
     closeSidebar();
   }
 };
-
-/* TODO:
-- The hamburger menu doesn't work when the panel is open
-
-*/
