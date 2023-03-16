@@ -7,11 +7,11 @@
 
   <div class="row">
 
-    <nav id="sideNav" class="sidenav hidden animate-width">
+    <nav id="sidebar" class="sidebar hidden animate-width">
       <div class="container">
 
         <div class="masterhead">
-          <h3 class="masthead">Menu <a href="#" onclick="toggleNav('sideNav')"><i class="fa-solid fa-x"></i></a></h3>
+          <h3 class="masthead">Menu <a href="#" onclick="toggleNav()"><i class="fa-solid fa-x"></i></a></h3>
           <div class="masthead-title">
             <h3></h3>
           </div>
@@ -43,12 +43,11 @@
 
   </div>
 
-
   <div id="main">
     <div class="container">
       <header class="masthead row">
         <div class="masthead-title col-1 col-s-1">
-          <h3><a href="#" onclick="toggleNav('sideNav')"><i class="fa-solid fa-bars"></i></a></h3>
+          <h3><a href="#" onclick="toggleNav('sidebar')"><i class="fa-solid fa-bars"></i></a></h3>
         </div>
 
         <div class="col-11 col-s-11">
@@ -76,39 +75,11 @@
 
     </div>
 
-
-
-
-
+  </div>
 
   </div>
 
-
-  </div>
-
-
-
-  {% include analytics.html %}
-
-  <script>
-
-    const toggleNav = (targetId) => {
-      console.log(document.getElementById(targetId).classList)
-      if (document.getElementById(targetId).classList.contains("hidden")) {
-        document.getElementById(targetId).classList.replace("hidden", "show")
-        document.getElementById("main").classList.add("content-slide")
-
-
-
-      } else {
-        document.getElementById(targetId).classList.replace("show", "hidden")
-        document.getElementById("main").classList.remove("content-slide")
-      }
-
-    }
-
-
-  </script>
+  {% include scripts.html %}
 
 </body>
 
