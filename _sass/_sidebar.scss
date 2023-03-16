@@ -3,11 +3,11 @@
 }
 
 #sidebar {
-    overflow-x: hidden;
     background-color: var(--body-bg-2);
-    height: 100vh;
-    max-width: 100%;
     position: fixed;
+    overflow-x: hidden;
+    height: 100dvh;
+    max-width: 100%;
     width: var(--sidebar-width);
     top: 0;
     left: calc(var(--sidebar-width) * -1);
@@ -17,7 +17,6 @@
 
 #sidebar.open {
     left: 0;
-    overflow-x: hidden;
 }
 
 #main {
