@@ -18,6 +18,12 @@
 
   small {
     font-weight: 400;
-    opacity: .5;
+    opacity: 0.5;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .masthead {
+    margin-left: 48px;
   }
 }
