@@ -1,9 +1,25 @@
 :root {
+    --sidebar-bg-lighter: var(--gray-850);
+    --sidebar-bg: var(--gray-800);
+    --sidebar-bg-darker: var(--gray-950);
+    --sidebar-color: var(--white);
+
     --sidebar-width: 300px;
+    --sibebar-shadow: none;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --sidebar-bg-lighter: var(--gray-850);
+        --sidebar-bg: var(--gray-900);
+        --sidebar-bg-darker: var(--gray-950);
+
+        --sibebar-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    }
 }
 
 #sidebar {
-    background-color: var(--body-bg-2);
+    background-color: var(--sidebar-bg);
     position: fixed;
     overflow-x: hidden;
     height: 100dvh;
@@ -15,8 +31,17 @@
     transition: left 0.3s;
 }
 
+#container-save {
+    max-width: 45rem;
+    padding-left: var(--spacer-2);
+    padding-right: var(--spacer-2);
+    margin-left: auto;
+    margin-right: auto;
+}
+
 #sidebar.open {
     left: 0;
+    box-shadow: var(--sidebar-shadow);
 }
 
 #main {
@@ -31,4 +56,87 @@
 
 #main.slide-right {
     left: var(--sidebar-width);
+}
+
+.menu h1,
+.menu h2,
+.menu h3,
+.menu h4 .menu h5 .menu h6,
+.menu p {
+    color: var(--sidebar-color);
+    padding: var(--spacer);
+    padding-left: var(--spacer-3);
+}
+
+.menu ul {
+    margin: 0;
+    padding: 0;
+}
+
+.menu-item a {
+    margin: 0;
+    padding: 0;
+    display: block;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    padding: 0.5rem;
+    padding-left: var(--spacer-3);
+    color: var(--sidebar-color);
+}
+
+.menu-item {
+    background-color: transparent;
+    width: 100%;
+    margin: 0;
+    border-color: transparent;
+    list-style-type: none;
+    transition: background-color 1.5s;
+    color: white;
+}
+
+.menu-item:hover {
+    background-color: hsla(0, 0%, 100%, 0.1);
+    transition: background-color 0.5s;
+    border-style: none solid none none;
+    border-color: var(--link-hover-color);
+    border-width: 5px;
+    outline-offset: -5px;
+    transition: border-color 1.5s;
+}
+
+// folder
+
+#folder {
+    z-index: 99;
+    background-color: var(--sidebar-bg);
+    display: flex;
+    position: fixed;
+    top: 14px;
+    left: -3px;
+    width: 48px;
+    height: 80px;
+    border-radius: 0px 10px 10px 0px;
+    box-shadow: var(--sidebar-shadow);
+    align-items: center;
+    justify-content: center;
+    transition: left 0.3s;
+}
+
+#folder.slide-right {
+    left: calc(var(--sidebar-width) - 3px);
+    transition: left 0.3s;
+}
+
+.hamburger-icon {
+    display: block;
+    font-size: 18px;
+    color: var(--sidebar-color);
+    text-decoration: none;
+    color: var(--sidebar-color);
+}
+
+.hamburger-icon:hover,
+.hamburger-icon:visited {
+    color: var(--sidebar-color);
 }

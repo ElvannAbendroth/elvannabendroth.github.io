@@ -5,54 +5,51 @@
 
 <body>
 
-  <nav id="sidebar" class="hidden">
-    <div class="container">
+  <div id="folder">
+    <a class="hamburger-icon" href="#" onclick="toggleNav()"><i class="fa-solid fa-bars"></i></a>
+  </div>
 
-      <div class="masterhead">
-        <h3 class="masthead">Menu <a href="#" onclick="toggleNav()"><i class="fa-solid fa-x"></i></a></h3>
-        <div class="masthead-title">
-          <h3></h3>
+  <nav id="sidebar" class="hidden">
+    <div class="">
+
+
+
+
+      {% assign page_title = page.title %}
+      <div class="menu">
+        <div class="masterhead">
+          <h3 class="masthead">Menu</a></h3>
         </div>
+
+
+        <h3>Pages</h3>
+
+        <ul>
+
+          {% for page in site.pages %}
+          {% if page.title and page.title != "Home" %}
+          <li href="{{ page.url }}" class="menu-item"><a href="{{ page.url }}">{{ page.title }}</a></li>
+          {% endif %}
+          {% endfor %}
+        </ul>
+
       </div>
 
 
-      <h2>Pages</h2>
 
-      {% assign page_title = page.title %}
-      <ul>
-        {% for page in site.pages %}
-        {% if page.title and page.title != "Home" %}
-        <li><a href="{{ page.url }}">{{ page.title }}</a></li>
-        {% endif %}
-        {% endfor %}
-      </ul>
 
-      <h2>Archives</h2>
-
-      {% assign postsByYearMonth = site.posts | group_by_exp: "post", "post.date | date: '%B %Y'" %}
-      {% for yearMonth in postsByYearMonth %}
-
-      <h3>{{ yearMonth.name }}</h3>
-      <ul>
-        {% for post in yearMonth.items %}
-        <li><a href="{{ post.url }}">{{ post.title }}</a></li>
-        {% endfor %}
-      </ul>
-      {% endfor %}
   </nav>
 
   <main id="main">
     <header class="masthead row container">
-      <div class="masthead-title col-1 col-s-1">
-        <h3><a href="#" onclick="toggleNav()"><i class="fa-solid fa-bars"></i></a></h3>
-      </div>
 
-      <div class="col-11 col-s-11">
-        <h3 class="masthead-title">
-          <a href="{{ site.baseurl }}/" title="Home">{{ site.title }}</a>
-          <small><i>{{ site.tagline | default: "A cool site project!"}}</i> </small>
-        </h3>
-      </div>
+
+
+      <h3 class="masthead-title">
+        <a href="{{ site.baseurl }}/" title="Home">{{ site.title }}</a>
+        <small><i>{{ site.tagline | default: "A cool site project!"}}</i> </small>
+      </h3>
+
     </header>
 
     <div class="container">
