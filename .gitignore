@@ -6,3 +6,4 @@ _templates
 .jekyll-metadata
 vendor
 .obsidian
+.vscode
