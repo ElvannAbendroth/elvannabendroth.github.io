@@ -3,16 +3,15 @@
 }
 
 #sidebar {
+    background-color: var(--body-bg-2);
     height: 100vh;
     max-width: 100%;
     position: fixed;
     width: var(--sidebar-width);
     top: 0;
-    background-color: var(--body-bg-2);
-    overflow-x: hidden;
-    float: left;
-    transition: left 0.3s;
     left: calc(var(--sidebar-width) * -1);
+    overflow-x: hidden;
+    transition: left 0.3s;
 }
 
 #sidebar.open {
@@ -23,24 +22,12 @@
     position: relative;
     top: 0;
     left: 0;
-    transition: left 0.3s;
     height: 100dvh;
+    width: 100vw;
+    overflow-x: hidden;
+    transition: left 0.3s;
 }
 
 #main.slide-right {
-    float: left;
-    overflow-x: hidden;
-    position: fixed;
     left: var(--sidebar-width);
-    width: 100vw;
-    overflow-x: hidden;
 }
-
-/* TODO:
-- cleanup this file
-- make navbar responsive
-- menu styling
-- on click in main close nav
-- add close on escape key
-
-*/

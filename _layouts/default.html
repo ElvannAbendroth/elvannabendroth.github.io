@@ -21,7 +21,7 @@
       {% assign page_title = page.title %}
       <ul>
         {% for page in site.pages %}
-        {% if page.title and page.title != page_title and page.title != "Home" %}
+        {% if page.title and page.title != "Home" %}
         <li><a href="{{ page.url }}">{{ page.title }}</a></li>
         {% endif %}
         {% endfor %}
