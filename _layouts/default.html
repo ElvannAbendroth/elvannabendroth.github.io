@@ -5,7 +5,7 @@
 
 <body>
 
-  <nav id="sidebar" class="sidebar hidden animate-width">
+  <nav id="sidebar" class="hidden">
     <div class="container">
 
       <div class="masterhead">
@@ -41,10 +41,10 @@
       {% endfor %}
   </nav>
 
-  <main id="main">
+  <main id="main" class="animate-sidebar">
     <header class="masthead row container">
       <div class="masthead-title col-1 col-s-1">
-        <h3><a href="#" onclick="toggleNav('sidebar')"><i class="fa-solid fa-bars"></i></a></h3>
+        <h3><a href="#" onclick="toggleNav()"><i class="fa-solid fa-bars"></i></a></h3>
       </div>
 
       <div class="col-11 col-s-11">
