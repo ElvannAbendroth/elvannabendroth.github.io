@@ -19,12 +19,12 @@ body {
 
 // No `:visited` state is required by default (browsers will use `a`)
 a {
-  color: $primary-color;
+  color: var(--primary-color);
 
   // `:focus` is linked to `:hover` for basic accessibility
   &:hover,
   &:focus {
-    color: $link-color-hover;
+    color: var(--primary-color-6);
   }
 
   strong {
@@ -65,6 +65,6 @@ thead th {
 
 mark {
   padding: 0.15rem;
-  background-color: $highlighter;
+  background-color: var(--highlighter);
   border-radius: 0.125rem;
 }

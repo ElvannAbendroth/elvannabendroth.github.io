@@ -3,7 +3,7 @@
 
 {% include head.html %}
 
-<body class="theme-a">
+<body>
 
   <div id="folder" class="animate-slide">
     <a class="hamburger-icon" href="#" onclick="toggleNav()"><i class="fa-solid fa-bars"></i></a>
@@ -22,9 +22,10 @@
           <ul>
             {% for page in site.pages %}
             {% if page.title and page.title != "Home" %}
-            <li href="{{ page.url }}" class="menu-item"><a href="{{ page.url }}"><i
-                  class="{{ page.icon | default: 'fa-solid fa-paperclip' }}"></i>{{
-                page.title }}</a></li>
+            <li href="{{ page.url }}" class="menu-item">
+              <a href="{{ page.url }}"><i class="{{ page.icon | default: 'fa-solid fa-paperclip' }}"></i>{{
+                page.title }}</a>
+            </li>
             {% endif %}
             {% endfor %}
           </ul>

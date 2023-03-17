@@ -1,17 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 
-$primary-color: $oc-blue-5;
-$link-color: $primary-color;
-$link-color-hover: adjust-color($primary-color, $saturation: 20%, $lightness: -5%);
-$highlighter: $oc-yellow-1;
-
 :root {
   --body-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --body-font-size: 16px;
   --body-line-height: 1.5;
-  --body-color: $oc-gray-7;
-  --body-bg: $oc-red-5;
+  --body-color: var(--gray-700);
+  --body-bg: var(--white);
 
   --heading-color: var(--gray-900);
 
@@ -25,25 +20,33 @@ $highlighter: $oc-yellow-1;
   --spacer: 1rem;
   --spacer-2: calc(var(--spacer) * 1.5);
   --spacer-3: calc(var(--spacer) * 3);
+
+  --primary-color: var(--oc-blue-5);
+  --link-color: var(--primary-color);
+  --link-color-hover: var(--oc-blue-7);
+  --highlighter: var(--oc-yellow-1);
 }
 
-// @media (prefers-color-scheme: dark) {
-//   :root {
-//     --body-color: var(--gray-300);
-//     --body-bg: var(--gray-800);
+@media (prefers-color-scheme: dark) {
+  :root {
+    --body-color: var(--gray-300);
+    --body-bg: var(--gray-800);
 
-//     --heading-color: var(--white);
+    --heading-color: var(--white);
 
-//     --link-color: var(--primary-color);
-//     --link-hover-color: var(--blue-400);
+    --link-color: var(--primary-color);
+    --link-hover-color: var(--blue-400);
 
-//     --border-color: var(--gray-700);
+    --border-color: var(--gray-700);
 
-//     --code-bg: var(--gray-900);
+    --code-bg: var(--gray-900);
 
-//     --sibebar-shadow: 5px 0px 10px rgba(0, 0, 0, 0.2);
-//   }
-// }
+    --sibebar-shadow: 5px 0px 10px rgba(0, 0, 0, 0.2);
+
+    --primary-color: var(--oc-blue-3);
+    --primary-color-6: var(--oc-blue-4);
+  }
+}
 
 // Example blue theme
 //[data-theme="default"] {

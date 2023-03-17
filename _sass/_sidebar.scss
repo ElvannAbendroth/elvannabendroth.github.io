@@ -9,16 +9,16 @@
     --sibebar-shadow: none;
 }
 
-// @media (prefers-color-scheme: dark) {
-//     :root {
-//         --sidebar-bg-lighter: var(--gray-850);
-//         --sidebar-bg: var(--gray-900);
-//         --sidebar-bg-darker: var(--gray-950);
-//         --sidebar-color: var(--gray-400);
-//         --sidebar-color-2: var(--gray-600);
-//         --sibebar-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-//     }
-// }
+@media (prefers-color-scheme: dark) {
+    :root {
+        --sidebar-bg-lighter: var(--gray-850);
+        --sidebar-bg: var(--gray-900);
+        --sidebar-bg-darker: var(--gray-950);
+        --sidebar-color: var(--gray-400);
+        --sidebar-color-2: var(--gray-600);
+        --sibebar-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    }
+}
 
 /* Sidebar Panel */
 
@@ -117,7 +117,7 @@
 }
 
 .menu-item:hover {
-    background-color: rgba($primary-color, 0.2);
+    background-color: var(--primary-color);
     border-radius: var(--border-radius);
 }
 
@@ -149,7 +149,7 @@
 }
 
 #folder a:hover {
-    color: $link-color;
+    color: var(--link-color);
 }
 
 #folder.slide-right {
