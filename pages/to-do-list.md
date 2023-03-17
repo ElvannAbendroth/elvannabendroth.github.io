@@ -1,6 +1,7 @@
 ---
 layout: page
-title: ✅To-Do List
+title: To-Do List
+icon: fa-solid fa-circle-check
 author: Elvann
 ---
 

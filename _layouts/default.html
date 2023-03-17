@@ -12,31 +12,24 @@
   <nav id="sidebar" class="hidden">
     <div class="">
 
-
-
-
       {% assign page_title = page.title %}
       <div class="menu">
         <div class="masterhead">
           <h3 class="masthead">Menu</a></h3>
         </div>
-
-
-        <h4>Pages</h4>
-
-        <ul>
-
-          {% for page in site.pages %}
-          {% if page.title and page.title != "Home" %}
-          <li href="{{ page.url }}" class="menu-item"><a href="{{ page.url }}">{{ page.title }}</a></li>
-          {% endif %}
-          {% endfor %}
-        </ul>
-
+        <div class="menu-content">
+          <h4>Pages</h4>
+          <ul>
+            {% for page in site.pages %}
+            {% if page.title and page.title != "Home" %}
+            <li href="{{ page.url }}" class="menu-item"><a href="{{ page.url }}"><i
+                  class="{{ page.icon | default: 'fa-solid fa-paperclip' }}"></i>{{
+                page.title }}</a></li>
+            {% endif %}
+            {% endfor %}
+          </ul>
+        </div>
       </div>
-
-
-
 
   </nav>
 

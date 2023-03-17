@@ -2,6 +2,7 @@
 layout: page
 title: About
 permalink: /about
+icon: fa-solid fa-circle-question
 ---
 
 <p class="message">
