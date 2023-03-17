@@ -12,12 +12,13 @@ This is the list of things I am currently working on on this Jekyll website. Cur
 
 ### Sidebar Styling
 
-- Make navbar responsive
-- Menu styling
-- On click in main close nav
+- ✅ Make navbar responsive
+- ✅ On click in main close nav
+- ✅ Menu style improvement
+- ✅ Page icon support
 - Add close on escape key
 
-### Layout Issues
+### Layout
 
 - Title tags in .md files are not generating is the title is an ID (Sidebar, Main, Folder)
 - I might want to also revisit `_grid.scss` . Include it in `_layout.scss` and revisit its structure for something more functional and efficient.
@@ -28,6 +29,7 @@ This is the list of things I am currently working on on this Jekyll website. Cur
 ### Queued Up
 
 - User Theme Selection (Light and Dark Mode)
+- ✅ Dynamic primary color theme support
 
 ### Ideas
 
