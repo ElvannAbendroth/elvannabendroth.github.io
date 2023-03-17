@@ -35,7 +35,7 @@
 }
 
 .animate-slide {
-    transition: left 0.3s;
+    transition: all 0.3s;
 }
 
 #sidebar.open {
@@ -134,6 +134,12 @@
     border-radius: 0px 10px 10px 0px;
 }
 
+#folder:hover {
+    width: 53px;
+    padding-left: 5px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+}
+
 #folder a {
     display: flex;
     width: 100%;
@@ -143,7 +149,7 @@
 }
 
 #folder a:hover {
-    color: $primary-color;
+    color: $link-color;
 }
 
 #folder.slide-right {
