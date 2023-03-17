@@ -32,7 +32,3 @@ This is the list of things I am currently working on on this Jekyll website. Cur
 
 - User Theme Selection (Theme Color)
 - Make extra "folder" buttons for easier navigation and different styles of options.
-
-{% highlight text %}
-Some code this
-{% endhighlight %}
