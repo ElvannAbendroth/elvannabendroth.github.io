@@ -1,3 +1,7 @@
 # elvannabendroth.github.io
 
-Welcome to my github pages! For now, this website is just a test, but I plan on adding my projects, be them related to developement or music! See you!
+Welcome to my github page!  This website is only a playground for me at the moment, and is using Ruby and Jekyll.
+
+Visit the current version of this website:
+
+➡️ http://elvannabendroth.github.io
