@@ -1,9 +1,0 @@
-_site
-_test
-_templates
-.sass-cache
-.jekyll-cache
-.jekyll-metadata
-vendor
-.obsidian
-.vscode
