@@ -35,6 +35,7 @@ module.exports = {
     'no-unused-vars': 'warn',
     'no-restricted-globals': 'warn',
     'react/jsx-no-target-blank': 'warn',
+    'no-unreachable': 'warn',
   },
   settings: {
     react: {
