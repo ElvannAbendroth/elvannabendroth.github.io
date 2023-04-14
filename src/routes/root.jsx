@@ -9,7 +9,10 @@ import {
   useNavigation,
   useSubmit,
 } from 'react-router-dom'
-import { getContacts, createContact } from '../contacts'
+import {
+  getContacts,
+  createContact,
+} from '../services/contacts'
 
 export async function loader({ request }) {
   const url = new URL(request.url)
