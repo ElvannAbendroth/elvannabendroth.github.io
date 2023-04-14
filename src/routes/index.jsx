@@ -2,7 +2,6 @@ import { useLoaderData } from 'react-router-dom'
 
 export default function Index() {
   const { contacts } = useLoaderData()
-  console.log(contacts)
 
   return (
     <div id="zero-state">

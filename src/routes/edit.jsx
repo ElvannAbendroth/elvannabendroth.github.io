@@ -7,10 +7,7 @@ import {
 import { updateContact } from '../contacts'
 
 export async function action({ request, params }) {
-  console.log(request)
-  console.log(params)
   const formData = await request.formData()
-  console.log(request)
   const updates = Object.fromEntries(formData)
   await updateContact(params.contactId, updates)
   return redirect(`/contacts/${params.contactId}`)
