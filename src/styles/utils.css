@@ -1,0 +1,61 @@
+/* OLD UTILS*/
+
+.small {
+  font-size: 0.87rem;
+}
+
+.big {
+  font-size: 1.2rem;
+}
+
+.darker {
+  color: var(--text-color-darker);
+}
+
+.center {
+  text-align: center;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  max-width: 100%;
+}
+
+.row > * {
+  min-width: 0;
+}
+
+.gap-0-5 {
+  gap: 0.5rem;
+}
+
+.gap-1 {
+  gap: 1rem;
+}
+.gap-2 {
+  gap: 2rem;
+}
+
+.place-center {
+  place-content: center;
+}
+
+/* UTILS */
+
+.hidden {
+  display: none;
+}
+
+.text-primary {
+  color: var(--primary);
+}
+
+.text-secondary {
+  color: var(--secondary);
+}

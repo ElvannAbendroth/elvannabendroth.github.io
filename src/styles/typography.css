@@ -1,0 +1,38 @@
+body {
+  font-family: var(--core-font);
+  color: var(--text-color);
+}
+
+.title,
+h1,
+h2,
+h3 {
+  font-family: var(--header-font);
+  font-weight: 700;
+  letter-spacing: 0em;
+  margin: 0;
+}
+
+h1 {
+  font-size: 2.8rem;
+  padding-bottom: 1rem;
+}
+
+h2 {
+  font-size: 2.3rem;
+  padding-bottom: 1rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  padding-bottom: 1rem;
+}
+
+a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--secondary);
+}
