@@ -1,0 +1,23 @@
+.root {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(
+    auto-fill minmax(500px, 1fr)
+  );
+}
+
+.root > * {
+  border: solid rgb(50, 133, 205) 3px;
+}
+
+/* .col1 {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+}
+
+.col2 {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+} */

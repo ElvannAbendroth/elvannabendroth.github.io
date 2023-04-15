@@ -57,6 +57,7 @@ button,
 textarea,
 select {
   font: inherit;
+  color: inherit;
 }
 
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
@@ -77,14 +78,11 @@ select {
 
 li,
 a,
-button {
+button,
+input {
   color: inherit;
   text-decoration: none;
   font-size: 1rem;
-}
-
-button {
-  cursor: pointer;
 }
 
 body {
@@ -122,12 +120,14 @@ header {
   padding: 1rem 2rem;
 }
 
-.content-wrapper {
-  max-width: var(--content-max-width);
-  margin: auto;
+section {
+  border: solid rgb(205, 50, 50) 3px;
 }
 
-section > * {
+.content-wrapper {
+  border: solid rgb(50, 205, 115) 3px;
+  max-width: var(--content-max-width);
+  margin: auto;
   display: flex;
   flex-direction: column;
   place-items: center;
@@ -137,6 +137,17 @@ section > * {
   padding: 4rem 2rem;
   min-height: 300px;
 }
+
+.content-wrapper > * {
+  border: solid rgb(205, 50, 202) 3px;
+  width: 100%;
+}
+
+/* ABOUT SECTION */
+
+/* send the bg color the component*/
+
+/* OTHER SECTIONS*/
 
 .about {
   background-color: var(--bg-color-darker);
@@ -148,48 +159,34 @@ section > * {
 
 .contact {
   background-color: var(--bg-color-darker);
+  position: relative;
 }
 
-/* HERO SECTION */
+/* BUTTONS & Inputs */
 
-.hero > * {
-  display: grid;
-  gap: 2rem;
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(240px, 1fr)
-  );
-  background: transparent;
-  min-height: 70vh;
-}
-
-.hero-content {
-  display: flex;
-  gap: 1.5rem;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.hero-list {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  color: #c8cfc9;
-  font-size: 0.9rem;
-}
-
-.hero-picture {
-  border-radius: 100%;
-  /* border: solid 3px hsl(268, 71%, 22%); */
-  box-shadow: hsla(268, 71%, 22%, 0.2) 10px 5px 15px,
-    rgba(0, 0, 0, 0.22) 0px 15px 12px;
-}
-
-/* BUTTONS */
-
-.button {
+button,
+input,
+textarea {
   border-radius: var(--border-radius);
   padding: 0.5rem 1rem;
+  background: var(--bg-color-darkest);
+  border: none;
+}
+
+input,
+textarea {
+  width: 100%;
+}
+
+input:focus-visible,
+input:focus,
+textarea:focus-visible,
+textarea:focus {
+  outline: solid 2px var(--secondary-a-50);
+}
+
+button {
+  cursor: pointer;
   transition: all 200ms ease;
 }
 
@@ -234,11 +231,14 @@ section > * {
 
 .nav-links {
   list-style: none;
+  display: flex;
+  gap: 1.7rem;
+  flex-direction: row;
+  align-items: center;
 }
 
 .nav-links li {
   display: inline-block;
-  padding-inline: 20px;
 }
 
 .nav-links li a {
@@ -247,4 +247,57 @@ section > * {
 
 .nav-links li a:hover {
   color: var(--secondary);
+}
+
+/* Contact Form */
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  min-width: 300px; /*temp*/
+  max-width: 100%;
+}
+
+.input-container {
+  position: relative;
+  top: 0;
+  height: 100%;
+}
+
+.contact-form > * > input,
+.contact-form > * > textarea {
+  position: relative;
+  top: 0;
+  height: 100%;
+  padding-left: 2.6rem;
+}
+
+.icon {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  padding: 0.5rem 0.8rem;
+  z-index: 1;
+}
+
+.icon > * {
+  color: hsla(0, 0%, 100%, 0.337);
+}
+
+.svg-top {
+  position: fixed;
+  z-index: -1;
+  top: -2px;
+  left: 0;
+  opacity: 75%;
+  transform: scaleX(-1);
+}
+
+.svg-bottom {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  opacity: 30%;
+  transform: scaleY(-1);
 }

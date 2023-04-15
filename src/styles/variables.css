@@ -5,16 +5,18 @@
   --primary: #9c45ff;
   --primary-lighter: #c695fe;
   --secondary: #2aff63;
+  --secondary-a-50: #2aff6388;
   --secondary-lighter: #c3ffd3;
-  --bg-color: #0b243b;
+  --bg-color: #0b253c;
   --bg-color-darker: #061829;
+  --bg-color-darkest: #04111e;
 
   --text-color: hsl(0, 0%, 100%);
-  --text-color-darker: hsl(202, 4%, 50%);
+  --text-color-darker: hsl(209, 14%, 72%);
 
   --core-font: 'Open Sans', sans-serif;
   --header-font: 'Playfair Display', sans-serif;
 
-  --border-radius: 0px;
+  --border-radius: 3px;
   --content-max-width: 800px;
 }
