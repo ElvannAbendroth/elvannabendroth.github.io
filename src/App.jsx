@@ -1,5 +1,5 @@
 import React from 'react'
-import { useState } from 'react'
+import { useRef } from 'react'
 import './App.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import * as faSolid from '@fortawesome/free-solid-svg-icons'
@@ -15,13 +15,26 @@ export default function App() {
   const [notification, setNotification] =
     useExpiringState(null)
 
-  // const [notification, setNotification] = useState({
-  //   message: "Hey I'm a notification",
-  //   type: 'default',
-  // })
+  const topRef = useRef(null)
+  const aboutRef = useRef(null)
+  const projectsRef = useRef(null)
+  const contactRef = useRef(null)
+
+  const executeScroll = target => {
+    if (target === 'top') {
+      topRef.current.scrollIntoView()
+    } else if (target === 'about') {
+      aboutRef.current.scrollIntoView()
+    } else if (target === 'projects') {
+      projectsRef.current.scrollIntoView()
+    } else if (target === 'contact') {
+      contactRef.current.scrollIntoView()
+    }
+  }
   return (
     <>
       <Notification notification={notification} />
+      <div ref={topRef}></div>
       <Header>
         <a href="#">
           <div className="logo title text-secondary">
@@ -29,21 +42,21 @@ export default function App() {
             Oodri.dev
           </div>
         </a>
-        <Navbar />
+        <Navbar executeScroll={executeScroll} />
       </Header>
       <Main>
         <Section label="Hero" className="hero">
           <Hero />
         </Section>
-
+        <div ref={aboutRef}></div>
         <Section label="About" className="about">
           <About />
         </Section>
-
+        <div ref={projectsRef}></div>
         <Section label="Projects" className="projects">
           <Projects />
         </Section>
-
+        <div ref={contactRef}></div>
         <Section label="Contact" className="contact">
           <Contact setNotification={setNotification} />
         </Section>
@@ -53,15 +66,25 @@ export default function App() {
   )
 }
 
-function Navbar() {
+function Navbar({ executeScroll }) {
   return (
     <nav>
       <ul role="list" className="nav-links">
         <li>
-          <a href="#about">About</a>
+          <a
+            href="#about"
+            onClick={() => executeScroll('about')}
+          >
+            About
+          </a>
         </li>
         <li>
-          <a href="#projects">Projects</a>
+          <a
+            onClick={() => executeScroll('projects')}
+            href="#projects"
+          >
+            Projects
+          </a>
         </li>
         <li>
           <a
@@ -86,7 +109,11 @@ function Navbar() {
           </a>
         </li>
         <li>
-          <a href="#contact" className="cta">
+          <a
+            onClick={() => executeScroll('contact')}
+            href="#contact"
+            className="cta"
+          >
             <button className="button button-secondary">
               Contact
             </button>
