@@ -37,7 +37,13 @@ export default function Contact({ setNotification }) {
   return (
     <div className={styles.root}>
       <p className={styles.text}>
-        Send me a message to get in touch!
+        Interested in{' '}
+        <span className="text-secondary">
+          working together
+        </span>
+        ? <br />
+        Send me a message to{' '}
+        <span className="text-primary">get in touch</span>!
       </p>
 
       <form
@@ -114,6 +120,13 @@ export default function Contact({ setNotification }) {
           </button>
         </div>
       </form>
+
+      <p className={styles.text}>
+        Website made with{' '}
+        <span className="text-secondary">React</span> and
+        designed by{' '}
+        <span className="text-primary">Oodri</span>.
+      </p>
       <img
         src="assets/overlay-1.svg"
         className={styles.svgBottom}

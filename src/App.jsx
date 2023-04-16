@@ -15,10 +15,6 @@ export default function App() {
   const [notification, setNotification] =
     useExpiringState(null)
 
-  // const [notification, setNotification] = useState({
-  //   message: "Hey I'm a notification",
-  //   type: 'default',
-  // })
   return (
     <>
       <Notification notification={notification} />
@@ -36,14 +32,6 @@ export default function App() {
           <Hero />
         </Section>
 
-        <Section label="About" className="about">
-          <About />
-        </Section>
-
-        <Section label="Projects" className="projects">
-          <Projects />
-        </Section>
-
         <Section label="Contact" className="contact">
           <Contact setNotification={setNotification} />
         </Section>
@@ -57,12 +45,6 @@ function Navbar() {
   return (
     <nav>
       <ul role="list" className="nav-links">
-        <li>
-          <a href="#about">About</a>
-        </li>
-        <li>
-          <a href="#projects">Projects</a>
-        </li>
         <li>
           <a
             href="https://github.com/ElvannAbendroth"
