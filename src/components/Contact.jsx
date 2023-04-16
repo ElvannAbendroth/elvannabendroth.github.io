@@ -1,8 +1,39 @@
+import React, { useRef } from 'react'
+import emailjs from '@emailjs/browser'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import * as faSolid from '@fortawesome/free-solid-svg-icons'
 import styles from './Contact.module.css'
 
-export default function Contact() {
+export default function Contact({ setNotification }) {
+  const form = useRef()
+
+  const sendEmail = e => {
+    e.preventDefault()
+
+    const publicKey = process.env.REACT_APP_PUBLIC_KEY
+
+    emailjs
+      .sendForm(
+        'service_zdxp318',
+        'template_nch1b3v',
+        form.current,
+        'zx0BpyPnkUrfspJ6i'
+      )
+      .then(result => {
+        setNotification({
+          message: `Your email was sent successfully!!`,
+          type: 'success',
+        })
+      })
+      .catch(error => {
+        console.log(error.text)
+        setNotification({
+          message: `Opps, something happened!`,
+          type: 'error',
+        })
+      })
+  }
+
   return (
     <div className={styles.root}>
       <p className={styles.text}>
@@ -10,6 +41,8 @@ export default function Contact() {
       </p>
 
       <form
+        ref={form}
+        onSubmit={sendEmail}
         className={styles.form}
         action="/action_page.php"
       >

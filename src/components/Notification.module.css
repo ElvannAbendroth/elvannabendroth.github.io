@@ -1,0 +1,36 @@
+.notification {
+  display: flex;
+  place-content: center;
+  gap: 0.5rem;
+  text-align: center;
+  align-items: center;
+  padding: 1rem;
+  z-index: 99;
+}
+
+.toaster {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.error {
+  background-color: hsl(0, 38%, 20%);
+  outline: solid 1px hsl(0, 26%, 30%);
+}
+
+.success {
+  background-color: hsl(124, 38%, 20%);
+  outline: solid 1px hsl(124, 28%, 33%);
+}
+
+.update {
+  background-color: hsl(39, 38%, 20%);
+  outline: solid 1px hsl(39, 28%, 33%);
+}
+
+.default {
+  background-color: hsl(0, 0%, 20%);
+  outline: solid 1px hsl(0, 0%, 47%);
+}

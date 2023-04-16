@@ -7,10 +7,15 @@ import Hero from './components/Hero'
 import About from './components/About'
 import Contact from './components/Contact'
 import Projects from './components/Projects'
+import { Notification } from './components/Notification'
+import { useExpiringState } from './hooks/useExpiringState'
 
 export default function App() {
+  const [notification, setNotification] =
+    useExpiringState(null)
   return (
     <>
+      <Notification notification={notification} />
       <Header>
         <a href="#">
           <div className="logo title text-secondary">
@@ -34,10 +39,9 @@ export default function App() {
         </Section>
 
         <Section label="Contact" className="contact">
-          <Contact />
+          <Contact setNotification={setNotification} />
         </Section>
       </Main>
-
       <img className="svg-top" src="assets/overlay-1.svg" />
     </>
   )
