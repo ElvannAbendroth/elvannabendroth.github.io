@@ -87,10 +87,8 @@ function Section({ label, className, children }) {
   return (
     <section className={className}>
       <div className="content-wrapper">
-        <div>
-          {label != 'Hero' ? <h2>{label}</h2> : null}
-          {children}
-        </div>
+        {label != 'Hero' ? <h2>{label}</h2> : null}
+        {children}
       </div>
     </section>
   )

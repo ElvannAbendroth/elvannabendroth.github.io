@@ -4,14 +4,9 @@
   gap: 2rem;
   grid-template-columns: repeat(
     auto-fit,
-    minmax(240px, 1fr)
+    minmax(300px, 1fr)
   );
-  background: transparent;
   min-height: 60vh;
-}
-
-.root > * {
-  border: solid rgb(50, 133, 205) 3px;
 }
 
 .col {
@@ -30,6 +25,7 @@
 }
 
 .picture {
+  align-self: center;
   border-radius: var(--border-radius);
   /* border: solid 3px hsl(268, 71%, 22%); */
   box-shadow: hsla(268, 71%, 22%, 0.2) 10px 5px 15px,

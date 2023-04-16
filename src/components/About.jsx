@@ -4,13 +4,25 @@ export default function About() {
   return (
     <div className={styles.root}>
       <div className={styles.col1}>
-        <h3>Things I like</h3>
-        <ul role="list">
-          <li>📍 Helsinki, Finland</li>
-          <li>🌿 React, Node.js, MongoDB</li>
-          <li>🛒 Wordpress, Shopify</li>
-        </ul>
+        <div>
+          <div className="title big">What I Do</div>
+          <ul role="list">
+            <li>🖥️ Web Dev & Design</li>
+            <li>🎵 Vocals, Harp & Metal</li>
+            <li>🌙 D&D, Video Games</li>
+          </ul>
+        </div>
+
+        <div>
+          <div className="title big">Tools</div>
+          <ul role="list">
+            <li>🌈 React, JS</li>
+            <li>🍔 Node, Express</li>
+            <li>🍃 MongoDB</li>
+          </ul>
+        </div>
       </div>
+
       <div className={styles.col2}>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing

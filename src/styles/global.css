@@ -121,31 +121,26 @@ header {
 }
 
 section {
-  border: solid rgb(205, 50, 50) 3px;
-}
-
-.content-wrapper {
-  border: solid rgb(50, 205, 115) 3px;
-  max-width: var(--content-max-width);
-  margin: auto;
+  /* border: solid rgb(205, 50, 50) 3px; */
+  position: relative;
   display: flex;
   flex-direction: column;
   place-items: center;
   justify-content: center;
-  gap: 1rem;
-  place-items: center;
-  padding: 4rem 2rem;
+  padding-block: 4rem;
   min-height: 300px;
 }
 
-.content-wrapper > * {
-  border: solid rgb(205, 50, 202) 3px;
-  width: 100%;
+.content-wrapper {
+  /* border: solid rgb(205, 187, 50) 3px; */
+  gap: 1.5rem;
+  max-width: var(--content-max-width);
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  justify-content: center;
+  padding-inline: 2rem;
 }
-
-/* ABOUT SECTION */
-
-/* send the bg color the component*/
 
 /* OTHER SECTIONS*/
 
@@ -159,7 +154,6 @@ section {
 
 .contact {
   background-color: var(--bg-color-darker);
-  position: relative;
 }
 
 /* BUTTONS & Inputs */

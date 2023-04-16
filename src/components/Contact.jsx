@@ -4,7 +4,7 @@ import * as faBrand from '@fortawesome/free-brands-svg-icons'
 
 export default function Contact() {
   return (
-    <>
+    <div>
       <p>Send me a message to get in touch!</p>
       <form
         className="contact-form"
@@ -70,6 +70,6 @@ export default function Contact() {
         src="assets/overlay-1.svg"
         className="svg-bottom"
       />
-    </>
+    </div>
   )
 }
