@@ -19,4 +19,13 @@
 
   --border-radius: 3px;
   --content-max-width: 850px;
+
+  --box-shadow-1: hsla(0, 0%, 100%, 0.066) 0px 7px 60px 0px;
+
+  /*Notification Styles*/
+
+  --success-color: var(--secondary);
+  --error-color: var(--primary);
+  --update-color: hsl(35, 100%, 60%);
+  --default-color: hsl(254, 97%, 56%);
 }

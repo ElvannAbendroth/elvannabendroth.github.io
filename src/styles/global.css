@@ -193,7 +193,7 @@ button {
 
 .button:hover {
   background-color: hsla(0, 0%, 100%, 0.03);
-  box-shadow: hsla(0, 0%, 100%, 0.066) 0px 7px 60px 0px;
+  box-shadow: var(--box-shadow-1);
 }
 
 .button-primary {

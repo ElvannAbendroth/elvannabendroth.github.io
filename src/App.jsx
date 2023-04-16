@@ -1,4 +1,5 @@
 import React from 'react'
+import { useState } from 'react'
 import './App.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import * as faSolid from '@fortawesome/free-solid-svg-icons'
@@ -13,6 +14,11 @@ import { useExpiringState } from './hooks/useExpiringState'
 export default function App() {
   const [notification, setNotification] =
     useExpiringState(null)
+
+  // const [notification, setNotification] = useState({
+  //   message: "Hey I'm a notification",
+  //   type: 'default',
+  // })
   return (
     <>
       <Notification notification={notification} />

@@ -1,4 +1,6 @@
 import styles from './Notification.module.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import * as faSolid from '@fortawesome/free-solid-svg-icons'
 
 export const Notification = ({ notification }) => {
   if (notification === null) {
@@ -18,13 +20,27 @@ export const Notification = ({ notification }) => {
 
   const getIconStyle = () => {
     if (notification.type === 'success') {
-      return 'done'
+      return (
+        <FontAwesomeIcon icon={faSolid.faCircleCheck} />
+      )
     } else if (notification.type === 'error') {
-      return 'clear'
+      return (
+        <FontAwesomeIcon
+          icon={faSolid.faTriangleExclamation}
+        />
+      )
     } else if (notification.type === 'update') {
-      return 'warning_amber'
+      return (
+        <FontAwesomeIcon
+          icon={faSolid.faTriangleExclamation}
+        />
+      )
     } else {
-      return 'priority_high'
+      return (
+        <FontAwesomeIcon
+          icon={faSolid.faTriangleExclamation}
+        />
+      )
     }
   }
 
