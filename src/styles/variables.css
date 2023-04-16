@@ -8,7 +8,7 @@
   --secondary-a-50: #2aff6388;
   --secondary-lighter: #c3ffd3;
   --bg-color: #0b253c;
-  --bg-color-darker: #061829;
+  --bg-color-darker: hsla(209, 74%, 9%, 1);
   --bg-color-darkest: #04111e;
 
   --text-color: hsl(0, 0%, 100%);
@@ -18,5 +18,5 @@
   --header-font: 'Playfair Display', sans-serif;
 
   --border-radius: 3px;
-  --content-max-width: 800px;
+  --content-max-width: 850px;
 }

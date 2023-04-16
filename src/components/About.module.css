@@ -2,10 +2,10 @@
   display: grid;
   grid-template-columns: repeat(
     auto-fit,
-    minmax(200px, 1fr)
+    minmax(170px, 1fr)
   );
-  grid-template-rows: auto;
-  gap: 2rem;
+
+  gap: 1rem;
 }
 
 .col1 {

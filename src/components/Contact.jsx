@@ -1,17 +1,23 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import * as faSolid from '@fortawesome/free-solid-svg-icons'
-import * as faBrand from '@fortawesome/free-brands-svg-icons'
+import styles from './Contact.module.css'
 
 export default function Contact() {
   return (
-    <div>
-      <p>Send me a message to get in touch!</p>
+    <div className={styles.root}>
+      <p className={styles.text}>
+        Send me a message to get in touch!
+      </p>
+
       <form
-        className="contact-form"
+        className={styles.form}
         action="/action_page.php"
       >
-        <div className="input-container">
-          <label className="icon darker" htmlFor="name">
+        <div className={styles.inputGroup}>
+          <label
+            className={`${styles.icon} darker`}
+            htmlFor="name"
+          >
             <FontAwesomeIcon icon={faSolid.faUser} />
           </label>
           <input
@@ -22,8 +28,11 @@ export default function Contact() {
           ></input>
         </div>
 
-        <div className="input-container">
-          <label className="icon darker" htmlFor="email">
+        <div className={styles.inputGroup}>
+          <label
+            className={`${styles.icon} darker`}
+            htmlFor="email"
+          >
             <FontAwesomeIcon icon={faSolid.faAt} />
           </label>
           <input
@@ -34,8 +43,11 @@ export default function Contact() {
           />
         </div>
 
-        <div className="input-container">
-          <label className="icon darker" htmlFor="subject">
+        <div className={styles.inputGroup}>
+          <label
+            className={`${styles.icon} darker`}
+            htmlFor="subject"
+          >
             <FontAwesomeIcon icon={faSolid.faTag} />
           </label>
           <input
@@ -46,8 +58,11 @@ export default function Contact() {
           />
         </div>
 
-        <div className="input-container">
-          <label className="icon darker" htmlFor="message">
+        <div className={styles.inputGroup}>
+          <label
+            className={`${styles.icon} darker`}
+            htmlFor="message"
+          >
             <FontAwesomeIcon icon={faSolid.faMessage} />
           </label>
           <textarea
@@ -57,18 +72,18 @@ export default function Contact() {
             placeholder="Type your message..."
           />
         </div>
-
-        <button
-          className="button button-secondary"
-          type="submit"
-        >
-          Send
-        </button>
+        <div>
+          <button
+            className="button button-secondary"
+            type="submit"
+          >
+            Send
+          </button>
+        </div>
       </form>
-
       <img
         src="assets/overlay-1.svg"
-        className="svg-bottom"
+        className={styles.svgBottom}
       />
     </div>
   )
