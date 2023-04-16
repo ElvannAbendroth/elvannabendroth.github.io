@@ -1,5 +1,5 @@
 import React from 'react'
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import './App.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import * as faSolid from '@fortawesome/free-solid-svg-icons'
@@ -15,6 +15,12 @@ export default function App() {
   const [notification, setNotification] =
     useExpiringState(null)
 
+  const contactRef = useRef(null)
+
+  const executeScroll = () => {
+    contactRef.current.scrollIntoView()
+  }
+
   return (
     <>
       <Notification notification={notification} />
@@ -25,7 +31,7 @@ export default function App() {
             Oodri.dev
           </div>
         </a>
-        <Navbar />
+        <Navbar executeScroll={executeScroll} />
       </Header>
       <Main>
         <Section label="Hero" className="hero">
@@ -33,6 +39,7 @@ export default function App() {
         </Section>
 
         <Section label="Contact" className="contact">
+          <div ref={contactRef}></div>
           <Contact setNotification={setNotification} />
         </Section>
       </Main>
@@ -41,7 +48,7 @@ export default function App() {
   )
 }
 
-function Navbar() {
+function Navbar({ executeScroll }) {
   return (
     <nav>
       <ul role="list" className="nav-links">
@@ -69,7 +76,10 @@ function Navbar() {
         </li>
         <li>
           <a href="#contact" className="cta">
-            <button className="button button-secondary">
+            <button
+              onClick={executeScroll}
+              className="button button-secondary"
+            >
               Contact
             </button>
           </a>
