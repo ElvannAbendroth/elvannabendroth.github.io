@@ -182,37 +182,6 @@ button {
   transition: all 200ms ease;
 }
 
-/* .button:hover {
-  background-color: hsla(0, 0%, 100%, 0.03);
-  box-shadow: var(--box-shadow-1);
-} */
-/* 
-.button-primary {
-  border: solid 2px var(--primary);
-  background-color: transparent;
-  color: var(--primary);
-  transition: all 200ms ease;
-}
-
-.button-primary:hover {
-  color: var(--primary-lighter);
-  border: solid 2px var(--primary-lighter);
-  transition: all 200ms ease;
-}
-
-.button-secondary {
-  border: solid 2px var(--secondary);
-  background-color: transparent;
-  color: var(--secondary);
-  transition: all 200ms ease;
-}
-
-.button-secondary:hover {
-  color: var(--secondary-lighter);
-  border: solid 2px var(--secondary-lighter);
-  transition: all 200ms ease;
-} */
-
 /* Design elements */
 
 .svg-top {

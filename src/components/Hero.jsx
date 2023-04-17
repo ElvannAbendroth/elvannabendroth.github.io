@@ -33,7 +33,7 @@ export default function Hero() {
               />
             }
             style="outline"
-            color="secondary"
+            color="primary"
             onClick={() =>
               window.open(
                 'https://github.com/ElvannAbendroth'

@@ -37,8 +37,12 @@ export default function App() {
     }
   }
 
-  const clickTest = () => {
-    console.log('Hi')
+  const handleClickScroll = () => {
+    const element = document.getElementById('contact')
+    if (element) {
+      // 👇 Will scroll smoothly to the top of the next section
+      element.scrollIntoView({ behavior: 'smooth' })
+    }
   }
 
   return (
