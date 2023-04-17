@@ -10,11 +10,16 @@ import Contact from './components/Contact'
 import Projects from './components/Projects'
 import { Notification } from './components/Notification'
 import { useExpiringState } from './hooks/useExpiringState'
+import Navbar from './components/Navbar'
+import Button from './components/Button'
+import { logDOM } from '@testing-library/react'
 
 export default function App() {
   const [notification, setNotification] =
     useExpiringState(null)
 
+  /* TODO: probably should make those scrolls more maintainable, 
+ also for when adding or removing links in the navbar */
   const topRef = useRef(null)
   const aboutRef = useRef(null)
   const projectsRef = useRef(null)
@@ -31,18 +36,21 @@ export default function App() {
       contactRef.current.scrollIntoView()
     }
   }
+
+  const clickTest = () => {
+    console.log('Hi')
+  }
+
   return (
     <>
       <Notification notification={notification} />
       <div ref={topRef}></div>
       <Header>
-        <a href="#">
-          <div className="logo title text-secondary">
-            <FontAwesomeIcon icon={faSolid.faGamepad} />{' '}
-            Oodri.dev
-          </div>
-        </a>
         <Navbar executeScroll={executeScroll} />
+        {/* <Button
+          label="Hi"
+          onClick={() => executeScroll('contact')}
+        /> */}
       </Header>
       <Main>
         <Section label="Hero" className="hero">
@@ -56,6 +64,7 @@ export default function App() {
         <Section label="Projects" className="projects">
           <Projects />
         </Section>
+
         <div ref={contactRef}></div>
         <Section label="Contact" className="contact">
           <Contact setNotification={setNotification} />
@@ -63,64 +72,6 @@ export default function App() {
       </Main>
       <img className="svg-top" src="assets/overlay-1.svg" />
     </>
-  )
-}
-
-function Navbar({ executeScroll }) {
-  return (
-    <nav>
-      <ul role="list" className="nav-links">
-        <li>
-          <a
-            href="#about"
-            onClick={() => executeScroll('about')}
-          >
-            About
-          </a>
-        </li>
-        <li>
-          <a
-            onClick={() => executeScroll('projects')}
-            href="#projects"
-          >
-            Projects
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://github.com/ElvannAbendroth"
-            target="_blank"
-          >
-            <FontAwesomeIcon
-              icon={faBrand.faGithub}
-              size="xl"
-            />
-          </a>
-        </li>
-        <li className="">
-          <a
-            href="https://www.behance.net/elvann"
-            target="_blank"
-          >
-            <FontAwesomeIcon
-              icon={faBrand.faBehance}
-              size="xl"
-            />
-          </a>
-        </li>
-        <li>
-          <a
-            onClick={() => executeScroll('contact')}
-            href="#contact"
-            className="cta"
-          >
-            <button className="button button-secondary">
-              Contact
-            </button>
-          </a>
-        </li>
-      </ul>
-    </nav>
   )
 }
 

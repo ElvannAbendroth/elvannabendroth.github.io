@@ -1,0 +1,26 @@
+.root {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  min-height: 100px;
+  padding: 1rem 2rem;
+}
+
+.logo {
+  font-weight: 800;
+  font-size: 1.8rem;
+  margin-right: auto;
+}
+
+.navLinks {
+  list-style: none;
+  display: flex;
+  gap: 1.7rem;
+  flex-direction: row;
+  align-items: center;
+}
+
+.navLinks li a {
+  transition: all 0.3s ease 0s;
+}

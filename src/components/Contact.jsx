@@ -10,8 +10,6 @@ export default function Contact({ setNotification }) {
   const sendEmail = e => {
     e.preventDefault()
 
-    const publicKey = process.env.REACT_APP_PUBLIC_KEY
-
     emailjs
       .sendForm(
         'service_zdxp318',

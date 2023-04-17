@@ -1,0 +1,12 @@
+.root {
+  border-radius: var(--border-radius);
+  padding: 0.5rem 1rem;
+  /* background: hsla(0, 0%, 100%, 0.1); */
+  transition: all 300ms ease;
+}
+
+.root:hover {
+  /* background-color: hsla(0, 0%, 100%, 0.17); */
+  box-shadow: var(--box-shadow-1);
+  filter: brightness(120%) saturate(75%);
+}

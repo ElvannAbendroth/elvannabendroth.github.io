@@ -1,0 +1,73 @@
+/* Background Colors */
+
+.bg-primary {
+  background: var(--primary);
+}
+
+.bg-primary:hover {
+  background: var(--primary-lighter);
+}
+
+.bg-secondary {
+  background: var(--secondary);
+}
+
+.bg-secondary {
+  background: var(--secondary);
+}
+
+.bg-default {
+  background: var(--bg-color-darkest);
+}
+
+.bg-alt {
+  background: var(--text-color);
+}
+
+.bg-none {
+  background: none;
+}
+
+.bg-transparent {
+  background: transparent;
+}
+
+/* Text Colors */
+
+.txt-primary {
+  color: var(--primary);
+}
+
+.txt-secondary {
+  color: var(--secondary);
+}
+
+.txt-default {
+  color: var(--txt-color);
+}
+
+.txt-alt {
+  color: var(--bg-color-darkest);
+}
+
+/* Border Colors */
+
+.border-primary {
+  border: solid 2px var(--primary);
+}
+
+.border-secondary {
+  border: solid 2px var(--secondary);
+}
+
+.border-default {
+  border: solid 2px var(--bg-color-darkest);
+}
+
+.border-alt {
+  border: solid 2px var(--txt-color);
+}
+
+.border-none {
+  border: none;
+}

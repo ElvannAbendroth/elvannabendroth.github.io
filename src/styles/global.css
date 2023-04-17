@@ -112,14 +112,6 @@ body {
 
 /* LAYOUT */
 
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  min-height: 100px;
-  padding: 1rem 2rem;
-}
-
 section {
   /* border: solid rgb(205, 50, 50) 3px; */
   position: relative;
@@ -161,7 +153,6 @@ section {
 
 /* BUTTONS & Inputs */
 
-button,
 input,
 textarea {
   border-radius: var(--border-radius);
@@ -191,11 +182,11 @@ button {
   transition: all 200ms ease;
 }
 
-.button:hover {
+/* .button:hover {
   background-color: hsla(0, 0%, 100%, 0.03);
   box-shadow: var(--box-shadow-1);
-}
-
+} */
+/* 
 .button-primary {
   border: solid 2px var(--primary);
   background-color: transparent;
@@ -220,35 +211,7 @@ button {
   color: var(--secondary-lighter);
   border: solid 2px var(--secondary-lighter);
   transition: all 200ms ease;
-}
-
-/* HEADER */
-
-.logo {
-  font-weight: 800;
-  font-size: 1.8rem;
-  margin-right: auto;
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 1.7rem;
-  flex-direction: row;
-  align-items: center;
-}
-
-.nav-links li {
-  display: inline-block;
-}
-
-.nav-links li a {
-  transition: all 0.3s ease 0s;
-}
-
-.nav-links li a:hover {
-  color: var(--secondary);
-}
+} */
 
 /* Design elements */
 
