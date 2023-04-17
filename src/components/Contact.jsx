@@ -3,6 +3,7 @@ import emailjs from '@emailjs/browser'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import * as faSolid from '@fortawesome/free-solid-svg-icons'
 import styles from './Contact.module.css'
+import Button from './Button'
 
 export default function Contact({ setNotification }) {
   const form = useRef()
@@ -104,12 +105,12 @@ export default function Contact({ setNotification }) {
           />
         </div>
         <div>
-          <button
-            className="button button-secondary"
+          <Button
             type="submit"
-          >
-            Send
-          </button>
+            label="Send"
+            style="outline"
+            color="secondary"
+          />
         </div>
       </form>
       <img

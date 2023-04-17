@@ -1,33 +1,60 @@
 import styles from './Button.module.css'
 
 export default function Button({ ...props }) {
-  /*style props*/
+  const getTextColor = () => {
+    if (props.style === 'outline') {
+      const textColor =
+        props.text || props.color || 'default'
 
-  //   if (props.style === 'outline') {
-  //     const textColor =
-  //       props.color || props.text || props.border || 'default'
-  //     const borderColor =
-  //       props.color || props.border || props.text || 'default'
-  //     const backgroundColor = props.background || 'none'
-  //   }
+      return textColor
+    } else {
+      const textColor = props.text || ''
 
-  const textColor = props.text || props.border || 'default'
-  const borderColor =
-    props.border || props.text || 'default'
-  const backgroundColor = props.background || 'default'
+      return textColor
+    }
+  }
+
+  const getBorderColor = () => {
+    if (props.style === 'outline') {
+      const borderColor =
+        props.border || props.color || 'default'
+
+      return borderColor
+    } else {
+      const borderColor = props.border || 'none'
+
+      return borderColor
+    }
+  }
+
+  const getBackgroundColor = () => {
+    if (props.style === 'outline') {
+      const backgroundColor = props.background || 'none'
+
+      return backgroundColor
+    } else {
+      const backgroundColor =
+        props.background || props.color || 'default'
+
+      return backgroundColor
+    }
+  }
 
   const label = props.label || 'Label'
   const onClick = e => {
     e.preventDefault()
-    props.onClick()
+    props.onClick ? props.onClick() : null
   }
 
   return (
     <button
+      type={props.type}
       onClick={onClick}
-      className={`${styles.root} bg-${backgroundColor} txt-${textColor} border-${borderColor} `}
+      className={`${
+        styles.root
+      } bg-${getBackgroundColor()} txt-${getTextColor()} border-${getBorderColor()} `}
     >
-      {label}
+      {props.icon} {label}
     </button>
   )
 }

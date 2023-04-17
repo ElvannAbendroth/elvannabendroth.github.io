@@ -58,7 +58,8 @@ export default function Navbar({ executeScroll }) {
           <li>
             <Button
               label="Contact"
-              // style="outline"
+              style="outline"
+              color="secondary"
               onClick={() => executeScroll('contact')}
             />
           </li>

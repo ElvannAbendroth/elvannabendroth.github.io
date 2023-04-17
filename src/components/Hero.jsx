@@ -2,6 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import * as faSolid from '@fortawesome/free-solid-svg-icons'
 import * as faBrand from '@fortawesome/free-brands-svg-icons'
 import styles from './Hero.module.css'
+import Button from './Button'
 
 export default function Hero() {
   return (
@@ -22,20 +23,24 @@ export default function Hero() {
           <li>🌿 React, Node.js, MongoDB</li>
           <li>🛒 Wordpress, Shopify</li>
         </ul>
-        <a
-          href="https://github.com/ElvannAbendroth"
-          target="_blank"
-        >
-          {' '}
-          <button className="button button-primary">
-            <FontAwesomeIcon
-              icon={faBrand.faGithub}
-              size="lg"
-            />
-            {'  '}
-            Visit my Github
-          </button>
-        </a>
+        <div>
+          <Button
+            label="Visit my Github"
+            icon={
+              <FontAwesomeIcon
+                icon={faBrand.faGithub}
+                size="lg"
+              />
+            }
+            style="outline"
+            color="secondary"
+            onClick={() =>
+              window.open(
+                'https://github.com/ElvannAbendroth'
+              )
+            }
+          />
+        </div>
       </div>
 
       <div className={styles.col}>

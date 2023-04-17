@@ -32,6 +32,10 @@
   background: transparent;
 }
 
+.bg-white {
+  background: white;
+}
+
 /* Text Colors */
 
 .txt-primary {
@@ -43,11 +47,15 @@
 }
 
 .txt-default {
-  color: var(--txt-color);
+  color: var(--bg-color-darkest);
 }
 
 .txt-alt {
-  color: var(--bg-color-darkest);
+  color: var(--txt-color);
+}
+
+.txt-white {
+  color: white;
 }
 
 /* Border Colors */
@@ -65,7 +73,11 @@
 }
 
 .border-alt {
-  border: solid 2px var(--txt-color);
+  border: solid 2px var(--text-color);
+}
+
+.border-white {
+  border: solid 2px white;
 }
 
 .border-none {
