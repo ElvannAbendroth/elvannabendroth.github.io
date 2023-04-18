@@ -1,4 +1,5 @@
 import styles from './Projects.module.css'
+import { Section } from '../App'
 
 const randomNumber = () => {
   return Math.floor(Math.random() * 100)
@@ -23,34 +24,40 @@ const projects = [
 
 export default function Projects({}) {
   return (
-    <div className={styles.root}>
-      <p className={styles.text}>Here are my projects</p>
+    <Section className="projects">
+      <h2 style={{ textAlign: 'center' }}>Projects</h2>
+      <div className={styles.root}>
+        <p className={styles.text}>Here are my projects</p>
 
-      <div className={styles.projects}>
-        {projects.map(project => (
-          <div key={project.title} className={styles.card}>
-            <h3>{project.title}</h3>
-            <img
-              className={styles.image}
-              src={project.image}
-              alt=""
-            />
-            <ul className={styles.stack} role="list">
-              {project.stack.map(stack => (
-                <li key={stack}>
-                  <img
-                    className={styles.stackIcon}
-                    src={`assets/stack/${stack}.png`}
-                    alt=""
-                  />
-                </li>
-              ))}
-            </ul>
+        <div className={styles.projects}>
+          {projects.map(project => (
+            <div
+              key={project.title}
+              className={styles.card}
+            >
+              <h3>{project.title}</h3>
+              <img
+                className={styles.image}
+                src={project.image}
+                alt=""
+              />
+              <ul className={styles.stack} role="list">
+                {project.stack.map(stack => (
+                  <li key={stack}>
+                    <img
+                      className={styles.stackIcon}
+                      src={`assets/stack/${stack}.png`}
+                      alt=""
+                    />
+                  </li>
+                ))}
+              </ul>
 
-            <p>{project.description}</p>
-          </div>
-        ))}
+              <p>{project.description}</p>
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
+    </Section>
   )
 }

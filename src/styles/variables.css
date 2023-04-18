@@ -2,24 +2,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root {
-  --primary: #a85cff;
-  --primary-lighter: #c695fe;
-  --secondary: #2aff63;
-  --secondary-a-50: #2aff6388;
-  --secondary-lighter: #93ffb0;
-  --bg-color: #0b253c;
-  --bg-color-darker: hsla(209, 74%, 9%, 1);
-  --bg-color-darkest: #04111e;
+  --primary-lighter: #93ffb0;
+  --primary: #2aff63;
+  --primary-darker: #1e943e;
+
+  --secondary-lighter: #c695fe;
+  --secondary: #af6bfd;
+  --secondary-darker: #9c45ff;
+
+  --bg-color-lighter: #0b253c;
+  --bg-color: #061828;
+  --bg-color-darker: #04111e;
 
   --bg-gradient: linear-gradient(
     45deg,
-    var(--secondary),
-    var(--bg-color),
-    #9c45ff
+    var(--primary),
+    var(--bg-color-lighter),
+    var(--secondary-darker)
   );
 
-  --text-color: hsl(0, 0%, 100%);
-  --text-color-darker: hsl(209, 14%, 72%);
+  --text-color: hsl(209, 15%, 91%);
+  --text-color-darker: hsl(210, 15%, 67%);
 
   --core-font: 'Open Sans', sans-serif;
   --header-font: 'Playfair Display', sans-serif;

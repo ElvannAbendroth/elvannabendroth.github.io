@@ -28,22 +28,13 @@ export default function App() {
         <Navbar executeScroll={executeScroll} />
       </Header>
       <Main>
-        <Section label="Hero" className="hero">
-          <Hero />
-        </Section>
+        <Hero />
         <div id="about"></div>
-        <Section label="About" className="about">
-          <About />
-        </Section>
-        {/* <div id="projects"></div>
-        <Section label="Projects" className="projects">
-          <Projects />
-        </Section> */}
-
+        <About />
+        <div id="projects"></div>
+        <Projects />
         <div id="contact"></div>
-        <Section label="Contact" className="contact">
-          <Contact setNotification={setNotification} />
-        </Section>
+        <Contact setNotification={setNotification} />
       </Main>
       <img className="svg-top" src="assets/overlay-1.svg" />
     </>
@@ -58,15 +49,10 @@ function Main({ children }) {
   return <main>{children}</main>
 }
 
-function Section({ label, className, children }) {
+export function Section({ className, children }) {
   return (
     <section className={className}>
-      <div className="content-wrapper">
-        {label != 'Hero' ? (
-          <h2 style={{ textAlign: 'center' }}>{label}</h2>
-        ) : null}
-        {children}
-      </div>
+      <div className="content-wrapper">{children}</div>
     </section>
   )
 }

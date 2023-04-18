@@ -16,7 +16,7 @@ export default function Navbar({ executeScroll }) {
           }}
         >
           <div
-            className={` ${styles.logo} title text-secondary`}
+            className={` ${styles.logo} title text-primary`}
           >
             <FontAwesomeIcon icon={faSolid.faGamepad} />{' '}
             Oodri.dev
@@ -71,7 +71,7 @@ export default function Navbar({ executeScroll }) {
             <Button
               onClick={() => executeScroll('contact')}
               variant="outlined"
-              color="secondary"
+              color="primary"
             >
               Contact
             </Button>

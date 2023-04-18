@@ -134,7 +134,7 @@ section {
 
 /* OTHER SECTIONS*/
 
-.about {
+/* .about {
   background-color: var(--bg-color-darker);
 }
 
@@ -144,7 +144,7 @@ section {
 
 .contact {
   background-color: var(--bg-color-darker);
-}
+} */
 
 /* BUTTONS & Inputs */
 
@@ -152,7 +152,7 @@ input,
 textarea {
   border-radius: var(--border-radius);
   padding: 0.5rem 1rem;
-  background: var(--bg-color-darkest);
+  background: var(--bg-color-darker);
   border: none;
 }
 
@@ -169,7 +169,7 @@ input:focus-visible,
 input:focus,
 textarea:focus-visible,
 textarea:focus {
-  outline: solid 2px var(--secondary-a-50);
+  outline: solid 2px var(--secondary-darker);
 }
 
 button {
@@ -188,11 +188,22 @@ button {
   transform: scaleX(-1);
 }
 
-p > a {
+/*links */
+
+a {
   text-decoration: underline;
-  color: var(--secondary);
+  color: var(--primary);
 }
 
-p > a:hover {
-  color: var(--secondary-lighter);
+a:hover {
+  color: var(--primary-lighter);
+}
+
+nav a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: var(--primary);
 }
