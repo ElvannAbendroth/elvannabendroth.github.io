@@ -16,11 +16,11 @@
   background: var(--secondary);
 }
 
-.bg-default {
-  background: var(--bg-color-darkest);
+.bg-bg {
+  background: var(--bg-color);
 }
 
-.bg-alt {
+.bg-txt {
   background: var(--text-color);
 }
 
@@ -30,10 +30,6 @@
 
 .bg-transparent {
   background: transparent;
-}
-
-.bg-white {
-  background: white;
 }
 
 /* Text Colors */
@@ -46,16 +42,12 @@
   color: var(--secondary);
 }
 
-.txt-default {
-  color: var(--bg-color-darkest);
+.txt-txt {
+  color: var(--text-color);
 }
 
-.txt-alt {
-  color: var(--txt-color);
-}
-
-.txt-white {
-  color: white;
+.txt-bg {
+  color: var(--bg-color);
 }
 
 /* Border Colors */
@@ -68,16 +60,12 @@
   border: solid 2px var(--secondary);
 }
 
-.border-default {
-  border: solid 2px var(--bg-color-darkest);
+.border-bg {
+  border: solid 2px var(--bg-color);
 }
 
-.border-alt {
+.border-txt {
   border: solid 2px var(--text-color);
-}
-
-.border-white {
-  border: solid 2px white;
 }
 
 .border-none {

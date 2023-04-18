@@ -8,7 +8,13 @@ export default function Navbar({ executeScroll }) {
   return (
     <>
       <nav className={styles.root}>
-        <a href="#">
+        <a
+          href="#"
+          onClick={e => {
+            e.preventDefault()
+            executeScroll('top')
+          }}
+        >
           <div
             className={` ${styles.logo} title text-secondary`}
           >
@@ -17,22 +23,28 @@ export default function Navbar({ executeScroll }) {
           </div>
         </a>
         <ul role="list" className={styles.navLinks}>
-          <li>
+          {/* <li>
             <a
               href="#about"
-              onClick={() => executeScroll('about')}
+              onClick={e => {
+                e.preventDefault()
+                executeScroll('about')
+              }}
             >
               About
             </a>
-          </li>
-          <li>
+          </li> */}
+          {/* <li>
             <a
-              onClick={() => executeScroll('projects')}
+              onClick={e => {
+                e.preventDefault()
+                executeScroll('projects')
+              }}
               href="#projects"
             >
               Projects
             </a>
-          </li>
+          </li> */}
           <li>
             <a
               href="https://github.com/ElvannAbendroth"
@@ -57,11 +69,12 @@ export default function Navbar({ executeScroll }) {
           </li>
           <li>
             <Button
-              label="Contact"
-              style="outline"
-              color="secondary"
               onClick={() => executeScroll('contact')}
-            />
+              variant="outlined"
+              color="secondary"
+            >
+              Contact
+            </Button>
           </li>
         </ul>
       </nav>

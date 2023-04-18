@@ -87,12 +87,7 @@ input {
 
 body {
   background-color: var(--bg-color);
-  background: linear-gradient(
-    45deg,
-    var(--secondary),
-    var(--bg-color),
-    var(--primary)
-  );
+  background: var(--bg-gradient);
   background-size: 400% 400%;
   animation: gradient 30s ease infinite;
   background-attachment: fixed;
@@ -191,4 +186,13 @@ button {
   left: 0;
   opacity: 75%;
   transform: scaleX(-1);
+}
+
+p > a {
+  text-decoration: underline;
+  color: var(--secondary);
+}
+
+p > a:hover {
+  color: var(--secondary-lighter);
 }

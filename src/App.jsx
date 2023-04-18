@@ -1,9 +1,8 @@
-import React from 'react'
-import { useRef } from 'react'
+import React, { useState } from 'react'
 import './App.css'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import * as faSolid from '@fortawesome/free-solid-svg-icons'
-import * as faBrand from '@fortawesome/free-brands-svg-icons'
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import * as faSolid from '@fortawesome/free-solid-svg-icons'
+// import * as faBrand from '@fortawesome/free-brands-svg-icons'
 import Hero from './components/Hero'
 import About from './components/About'
 import Contact from './components/Contact'
@@ -11,65 +10,37 @@ import Projects from './components/Projects'
 import { Notification } from './components/Notification'
 import { useExpiringState } from './hooks/useExpiringState'
 import Navbar from './components/Navbar'
-import Button from './components/Button'
-import { logDOM } from '@testing-library/react'
 
 export default function App() {
   const [notification, setNotification] =
     useExpiringState(null)
 
-  /* TODO: probably should make those scrolls more maintainable, 
- also for when adding or removing links in the navbar */
-  const topRef = useRef(null)
-  const aboutRef = useRef(null)
-  const projectsRef = useRef(null)
-  const contactRef = useRef(null)
-
   const executeScroll = target => {
-    if (target === 'top') {
-      topRef.current.scrollIntoView()
-    } else if (target === 'about') {
-      aboutRef.current.scrollIntoView()
-    } else if (target === 'projects') {
-      projectsRef.current.scrollIntoView()
-    } else if (target === 'contact') {
-      contactRef.current.scrollIntoView()
-    }
-  }
-
-  const handleClickScroll = () => {
-    const element = document.getElementById('contact')
-    if (element) {
-      // 👇 Will scroll smoothly to the top of the next section
-      element.scrollIntoView({ behavior: 'smooth' })
-    }
+    const element = document.getElementById(target)
+    element.scrollIntoView()
   }
 
   return (
     <>
       <Notification notification={notification} />
-      <div ref={topRef}></div>
+      <div id="top"></div>
       <Header>
         <Navbar executeScroll={executeScroll} />
-        {/* <Button
-          label="Hi"
-          onClick={() => executeScroll('contact')}
-        /> */}
       </Header>
       <Main>
         <Section label="Hero" className="hero">
           <Hero />
         </Section>
-        <div ref={aboutRef}></div>
+        <div id="about"></div>
         <Section label="About" className="about">
           <About />
         </Section>
-        <div ref={projectsRef}></div>
+        {/* <div id="projects"></div>
         <Section label="Projects" className="projects">
           <Projects />
-        </Section>
+        </Section> */}
 
-        <div ref={contactRef}></div>
+        <div id="contact"></div>
         <Section label="Contact" className="contact">
           <Contact setNotification={setNotification} />
         </Section>

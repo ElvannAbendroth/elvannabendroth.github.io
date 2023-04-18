@@ -25,21 +25,20 @@ export default function Hero() {
         </ul>
         <div>
           <Button
-            label="Visit my Github"
-            icon={
-              <FontAwesomeIcon
-                icon={faBrand.faGithub}
-                size="lg"
-              />
-            }
-            style="outline"
-            color="primary"
             onClick={() =>
               window.open(
                 'https://github.com/ElvannAbendroth'
               )
             }
-          />
+            variant="outlined"
+            color="primary"
+          >
+            <FontAwesomeIcon
+              icon={faBrand.faGithub}
+              size="lg"
+            />{' '}
+            Visit my Github
+          </Button>
         </div>
       </div>
 

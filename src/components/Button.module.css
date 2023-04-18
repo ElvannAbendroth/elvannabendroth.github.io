@@ -3,6 +3,7 @@
   padding: 0.5rem 1rem;
   /* background: hsla(0, 0%, 100%, 0.1); */
   transition: all 300ms ease;
+  font-weight: 600;
 }
 
 .root:hover {

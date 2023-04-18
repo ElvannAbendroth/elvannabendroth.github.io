@@ -1,49 +1,55 @@
 import styles from './Button.module.css'
 
-export default function Button({ ...props }) {
+export default function Button({ children, ...props }) {
   const getTextColor = () => {
-    if (props.style === 'outline') {
-      const textColor =
-        props.text || props.color || 'default'
+    if (
+      props.variant === 'outlined' ||
+      props.variant === 'text' ||
+      !props.variant
+    ) {
+      const textColor = props.color || 'primary'
 
       return textColor
     } else {
-      const textColor = props.text || ''
+      const textColor = props.color || 'bg'
 
       return textColor
     }
   }
 
   const getBorderColor = () => {
-    if (props.style === 'outline') {
-      const borderColor =
-        props.border || props.color || 'default'
+    if (props.variant === 'outlined') {
+      const borderColor = props.color || 'primary'
 
       return borderColor
     } else {
-      const borderColor = props.border || 'none'
+      const borderColor = 'none'
 
       return borderColor
     }
   }
 
   const getBackgroundColor = () => {
-    if (props.style === 'outline') {
-      const backgroundColor = props.background || 'none'
+    if (
+      props.variant === 'outlined' ||
+      props.variant === 'text' ||
+      !props.variant
+    ) {
+      const backgroundColor = 'none'
 
       return backgroundColor
     } else {
-      const backgroundColor =
-        props.background || props.color || 'default'
+      const backgroundColor = props.color || 'primary'
 
       return backgroundColor
     }
   }
 
-  const label = props.label || 'Label'
   const onClick = e => {
-    e.preventDefault()
-    props.onClick ? props.onClick() : null
+    if (props.onClick) {
+      e.preventDefault()
+      props.onClick()
+    }
   }
 
   return (
@@ -54,7 +60,7 @@ export default function Button({ ...props }) {
         styles.root
       } bg-${getBackgroundColor()} txt-${getTextColor()} border-${getBorderColor()} `}
     >
-      {props.icon} {label}
+      {children}
     </button>
   )
 }

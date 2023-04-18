@@ -111,6 +111,13 @@ export default function Contact({ setNotification }) {
             style="outline"
             color="secondary"
           />
+          <Button
+            type="submit"
+            variant="outlined"
+            color="secondary"
+          >
+            Send
+          </Button>
         </div>
       </form>
       <img
