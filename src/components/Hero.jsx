@@ -7,7 +7,7 @@ import { Section } from '../App'
 
 export default function Hero() {
   return (
-    <Section label="Hero" className="hero">
+    <Section>
       <div className={styles.root}>
         <div className={styles.col}>
           <h1>

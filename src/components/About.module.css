@@ -5,7 +5,7 @@
     minmax(170px, 1fr)
   );
   gap: 1rem;
-  place-items: center;
+  justify-content: center;
 }
 
 .col1 {

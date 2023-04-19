@@ -1,0 +1,10 @@
+.root {
+  /* border: solid rgb(50, 164, 205) 3px; */
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.text {
+  text-align: center;
+}

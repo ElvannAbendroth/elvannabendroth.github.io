@@ -6,61 +6,72 @@ export default function About() {
     <Section className="bg-bg">
       <h2 style={{ textAlign: 'center' }}>About</h2>
       <div className={styles.root}>
-        {/* <div className={styles.col1}>
-        <div>
-          <div className="title big">What I Do</div>
-          <ul role="list">
-            <li>🖥️ Web Dev & Design</li>
-            <li>🎵 Vocals, Harp & Metal</li>
-            <li>🌙 D&D, Video Games</li>
-          </ul>
+        <div className={styles.col1}>
+          <div>
+            <div className="title big">General Info</div>
+            <ul role="list">
+              <li>📍 Helsinki, Finland</li>
+              <li>🍁 From Canada</li>
+              <li>🌐 EN, FR & FI</li>
+            </ul>
+          </div>
+          <div>
+            <div className="title big">Tech Stack</div>
+            <ul role="list">
+              <li>🌈 React, JS</li>
+              <li>🍔 Node, Express</li>
+              <li>🍃 MongoDB</li>
+              <li>⚙️ Git</li>
+            </ul>
+          </div>
         </div>
-
-        <div>
-          <div className="title big">Tools</div>
-          <ul role="list">
-            <li>🌈 React, JS</li>
-            <li>🍔 Node, Express</li>
-            <li>🍃 MongoDB</li>
-          </ul>
-        </div>
-      </div> */}
 
         <div className={styles.col2}>
           <p>
             Hi, my name is Oodri and I'm a junior fullstack
-            web developer from Canada living in Helsinki. I
-            speak English & French fluently and am learning
-            Finnish.
+            web developer living in Helsinki. I also play
+            the harp, sing, and love D&D and TTRPG games.
           </p>
           <p>
             My interest for web development stems from my
             enjoyment for problem solving & challenges.
-            Creating web apps that are both useful and
-            stylish makes me feel kind of like a magician.
+            Creating web apps for which the useful and
+            stylish meet feels like a superpower to me.
           </p>
-          <p>
-            I have worked with many different tools and
-            technologies including React, Node/Express,
-            MongoDB & Git.
-          </p>
-          <h3>Experience</h3>
           <p>
             I initially started my career as a freelance
-            musician 10+ years ago, for which being
-            autonomous, adaptive and resourceful have been
-            an absolute requirement. Those skills have
-            proven highly helpful in my web development
-            journey so far and I think they could make me a
-            great asset for your team.
+            musician after graduating with a Bachelor Degree
+            in Music. In my work as an entrepreneur,
+            learning to be autonomous, adaptive and
+            resourceful have been an absolute requirements.
+            I think these skills would make me a great asset
+            for your team.
           </p>
           <p>
-            Although my experience working with clients &
-            companies as a web developer is still limited,
-            technology has always played a crucial part of
-            my entrepreneurial journey. Some of the tasks I
-            have taken on are:
+            After I graduated, I enrolled in Computer
+            Science and studied there for 1 year, which
+            allowed me to learn some of the basics of
+            programming. More recently I have been working
+            through the{' '}
+            <a
+              href="https://fullstackopen.com/en/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Fullstack Open Course
+            </a>{' '}
+            offered by the University of Helsinki.
           </p>
+          <p>
+            {/* Although my experience working with clients &
+            companies as a web developer is still limited,
+            tech skills have been an integral part of my
+            entrepreneurial journey.  */}
+            I'm eager to take on new challenges, learn new
+            tools, and be part of an awesome team of
+            developer.
+          </p>
+          {/* <p>Some of the tasks I have taken on are:</p>
           <ul>
             <li>
               Design & asset creation for my artist brand.
@@ -84,24 +95,7 @@ export default function About() {
             helping out friends & colleagues setup their
             professional websites & design assets over the
             years.
-          </p>
-          <h3>Education</h3>
-          <p>
-            I graduated with a Bachelor's Degree in music
-            with the University of Montreal in 2016 as a
-            harpist and classical singer, after which I
-            studied Computer Science for 1 year. I am
-            currently going through the{' '}
-            <a
-              href="https://fullstackopen.com/en/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Fullstack Open Course
-            </a>{' '}
-            offered by the University of Helsinki as well as
-            working on side projects.
-          </p>
+          </p> */}
         </div>
       </div>
     </Section>

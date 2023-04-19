@@ -10,6 +10,7 @@ import Projects from './components/Projects'
 import { Notification } from './components/Notification'
 import { useExpiringState } from './hooks/useExpiringState'
 import Navbar from './components/Navbar'
+import Stack from './components/Stack'
 
 export default function App() {
   const [notification, setNotification] =
@@ -31,8 +32,10 @@ export default function App() {
         <Hero />
         <div id="about"></div>
         <About />
-        <div id="projects"></div>
-        <Projects />
+        <div id="stack"></div>
+        <Stack />
+        {/* <div id="projects"></div>
+        <Projects /> */}
         <div id="contact"></div>
         <Contact setNotification={setNotification} />
       </Main>
